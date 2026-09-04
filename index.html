@@ -5,7 +5,7 @@
 <meta name="description" content="1NNEWAYY RENOVATIONS — Florida renovation services including flooring, drywall, painting, electrical, plumbing and more. Serving Hillsborough, Polk, Pinellas, Pasco, Hernando and Citrus counties.">
 <meta name="theme-color" content="#e8ece7">
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e8ece7;color:#151515;font-family:Arial,sans-serif}a{color:inherit}.top{position:sticky;top:0;z-index:20;background:rgba(232,236,231,.96);backdrop-filter:blur(8px);border-bottom:1px solid #222}.nav{max-width:1100px;margin:auto;display:flex;gap:8px;align-items:center;padding:10px 14px;overflow:auto;white-space:nowrap}.nav a{text-decoration:none;font-size:13px;padding:9px 11px;border:1px solid #333;border-radius:999px}.nav .cta{background:#111;color:#fff}.hero{max-width:1100px;margin:auto;padding:14px}.original-page{margin:0 auto 18px;max-width:900px;scroll-margin-top:70px}.original-page img{display:block;width:100%;height:auto;border-radius:2px;box-shadow:0 5px 22px rgba(0,0,0,.10)}.feature{max-width:1100px;margin:0 auto 22px;padding:28px 18px;border-top:1px solid #222;border-bottom:1px solid #222}.feature h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,6vw,56px);margin:0 0 8px;letter-spacing:.02em}.feature p{max-width:780px;line-height:1.6;margin:8px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}.card{border:1px solid #222;padding:18px;background:rgba(255,255,255,.25)}.card h3{margin:0 0 8px;font-family:Georgia,serif;font-weight:400}.button{display:inline-block;text-decoration:none;padding:12px 16px;border:1px solid #111;border-radius:4px;margin:6px 6px 0 0;font-weight:700}.button.dark{background:#111;color:#fff}form{display:grid;gap:10px;max-width:680px}input,textarea,select{width:100%;padding:13px;border:1px solid #555;border-radius:3px;background:#fff;font:inherit}textarea{min-height:120px}.hp{position:absolute;left:-9999px}footer{padding:30px 18px;text-align:center;border-top:1px solid #222;margin-top:20px;font-size:14px}.small{font-size:12px;opacity:.75}@media(min-width:760px){.hero{padding:24px}.original-page{margin-bottom:30px}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#e8ece7;color:#151515;font-family:Arial,sans-serif}a{color:inherit}.top{position:sticky;top:0;z-index:20;background:rgba(232,236,231,.96);backdrop-filter:blur(8px);border-bottom:1px solid #222}.nav{max-width:1100px;margin:auto;display:flex;gap:8px;align-items:center;padding:10px 14px;overflow:auto;white-space:nowrap}.nav a{text-decoration:none;font-size:13px;padding:9px 11px;border:1px solid #333;border-radius:999px}.nav a{background:#111;color:#fff}.nav a:hover,.nav a:focus{background:#000;color:#fff}.nav .cta{background:#111;color:#fff}.hero{max-width:1100px;margin:auto;padding:14px}.original-page{margin:0 auto 18px;max-width:900px;scroll-margin-top:70px}.original-page img{display:block;width:100%;height:auto;border-radius:2px;box-shadow:0 5px 22px rgba(0,0,0,.10)}.feature{max-width:1100px;margin:0 auto 22px;padding:28px 18px;border-top:1px solid #222;border-bottom:1px solid #222}.feature h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(30px,6vw,56px);margin:0 0 8px;letter-spacing:.02em}.feature p{max-width:780px;line-height:1.6;margin:8px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:18px}.card{border:1px solid #222;padding:18px;background:rgba(255,255,255,.25)}.card h3{margin:0 0 8px;font-family:Georgia,serif;font-weight:400}.button{display:inline-block;text-decoration:none;padding:12px 16px;border:1px solid #111;border-radius:4px;margin:6px 6px 0 0;font-weight:700}.button.dark{background:#111;color:#fff}form{display:grid;gap:10px;max-width:680px}input,textarea,select{width:100%;padding:13px;border:1px solid #555;border-radius:3px;background:#fff;font:inherit}textarea{min-height:120px}.hp{position:absolute;left:-9999px}footer{padding:30px 18px;text-align:center;border-top:1px solid #222;margin-top:20px;font-size:14px}.small{font-size:12px;opacity:.75}@media(min-width:760px){.hero{padding:24px}.original-page{margin-bottom:30px}}
 
 /* Clean automatic page-to-page presentation */
 .presentation{position:relative;max-width:1100px;margin:0 auto 28px;padding:0 14px}
@@ -28,6 +28,16 @@
 @media(max-width:700px){.presentation{padding:0 8px}.presentation-stage,.slides{min-height:calc(100svh - 100px);max-height:none}.original-page.slide{padding:18px 12px}.original-page.slide img{max-height:calc(100svh - 145px)}.slide-arrow{width:40px;height:40px;font-size:28px}.slide-arrow.prev{left:9px}.slide-arrow.next{right:9px}.slide-hint{font-size:9px;bottom:10px}.slide-counter{top:10px;right:10px}}
 @media (prefers-reduced-motion: reduce){.original-page.slide{transition:none;transform:none}.slide-arrow,.slide-dot{transition:none}.slide-progress span{transition:none}.slide-hint{transition:none}}
 
+/* Functional header navigation + customer review UI */
+.nav a[data-nav-slide]{cursor:pointer}
+.review-form{max-width:680px}
+.star-picker{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px;font-size:34px;line-height:1;margin:4px 0 6px}
+.star-picker input{position:absolute;opacity:0;pointer-events:none}
+.star-picker label{cursor:pointer;color:#aaa;transition:transform .15s ease,color .15s ease}
+.star-picker label:hover,.star-picker label:hover ~ label,.star-picker input:checked ~ label{color:#b8860b}
+.star-picker label:hover{transform:scale(1.08)}
+@media (prefers-reduced-motion: reduce){.star-picker label{transition:none}}
+
 /* Native smooth transitions between separate HTML pages where supported. */
 @view-transition{navigation:auto}
 ::view-transition-old(root){animation:pageFadeOut .35s ease both}
@@ -36,9 +46,10 @@
 @keyframes pageFadeIn{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion: reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head><body>
 <header class="top"><nav class="nav">
-<a href="#page-1">Home</a><a href="#page-2">Company</a><a href="#page-3">Service Areas</a><a href="#page-4">Our Work</a><a href="#page-11">Reviews</a><a href="#page-12">Masterplan</a><a href="#contact" class="cta">Free Estimate</a>
+<a href="#page-1" data-nav-slide="0">Home</a><a href="#page-2" data-nav-slide="1">Company</a><a href="#page-3" data-nav-slide="2">Service Areas</a><a href="#page-4" data-nav-slide="3">Our Work</a><a href="#page-11" data-nav-slide="10">Reviews</a><a href="#page-12" data-nav-slide="11">Masterplan</a><a href="#contact" class="cta">Free Estimate</a>
 </nav></header>
 <main class="hero">
 <section class="presentation" id="presentation" aria-label="1NNEWAYY RENOVATIONS presentation">
@@ -75,6 +86,7 @@
 <div class="card"><h3>Plumbing</h3><p>Residential plumbing improvements and project services.</p></div>
 
 </div></section>
+<section class="feature" id="leave-review"><h2>Leave a Review</h2><p>We value your experience with <strong>1NNEWAYY RENOVATIONS</strong>. Select a star rating and tell us about your project.</p><form id="reviewForm" class="review-form" action="#" method="post"><input name="reviewer_name" required maxlength="80" placeholder="Your name"><div class="star-picker" role="radiogroup" aria-label="Star rating"><input id="star5" type="radio" name="rating" value="5" required><label for="star5" title="5 stars">★</label><input id="star4" type="radio" name="rating" value="4"><label for="star4" title="4 stars">★</label><input id="star3" type="radio" name="rating" value="3"><label for="star3" title="3 stars">★</label><input id="star2" type="radio" name="rating" value="2"><label for="star2" title="2 stars">★</label><input id="star1" type="radio" name="rating" value="1"><label for="star1" title="1 star">★</label></div><textarea name="review_text" required maxlength="1000" placeholder="Tell us about your experience"></textarea><button class="button dark" type="submit">Submit Review</button><a class="button" href="https://g.page/r/CcpuRI50pRSLEAE/review" target="_blank" rel="noopener">Leave a Google Review</a><p id="reviewStatus" class="small" aria-live="polite"></p></form><p class="small">Honest customer reviews only. Website submissions will be reviewed before publication.</p><div id="liveReviews" class="cards" aria-live="polite"></div></section>
 <section class="feature"><h2>Request a Free Consultation</h2><p>Tell us what you need and we’ll help you take the next step.</p>
 <form id="quoteForm" action="mailto:contact@1nnewayyrenovations.com" method="post" enctype="text/plain">
 <input class="hp" name="website" tabindex="-1" autocomplete="off">
@@ -101,6 +113,19 @@
   let timer = null;
   let progressTimer = null;
   let paused = false;
+
+  // Header tabs control the same presentation as the slide controls.
+  document.querySelectorAll('[data-nav-slide]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = Number(link.dataset.navSlide);
+      if (Number.isFinite(target) && slides[target]) {
+        goTo(target);
+        restart();
+        document.getElementById('presentation')?.scrollIntoView({behavior: reduceMotion ? 'auto' : 'smooth', block: 'start'});
+      }
+    });
+  });
 
   if (slides.length) {
     total.textContent = slides.length;
@@ -174,6 +199,40 @@
     if (!reduceMotion) start();
     else hint.textContent = 'Automatic transitions disabled by device settings';
   }
+
+  // Supabase review database configuration. Replace these two placeholders with your project's
+  // Project URL and Publishable key after the free Supabase project is created.
+  const SUPABASE_URL = 'https://vhwydkhqnwcatjgvivdp.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_8dkgxiff3N966UjAyBSORw_qc6t1F3X';
+  const reviewForm = document.getElementById('reviewForm');
+  const reviewStatus = document.getElementById('reviewStatus');
+  const liveReviews = document.getElementById('liveReviews');
+  const supabaseReady = window.supabase && SUPABASE_URL.startsWith('https://') && !SUPABASE_URL.includes('YOUR_') && !SUPABASE_PUBLISHABLE_KEY.includes('YOUR_');
+  const supabaseClient = supabaseReady ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
+
+  function stars(n){ return '★'.repeat(Number(n)) + '☆'.repeat(Math.max(0,5-Number(n))); }
+  function escapeHtml(value){ const d=document.createElement('div'); d.textContent=value ?? ''; return d.innerHTML; }
+  async function loadApprovedReviews(){
+    if (!supabaseClient || !liveReviews) return;
+    const { data, error } = await supabaseClient.from('reviews').select('reviewer_name,rating,review_text,created_at').eq('approved', true).order('created_at', {ascending:false});
+    if (error) { console.error(error); return; }
+    liveReviews.innerHTML = data.length ? data.map(r => `<article class="card"><div aria-label="${r.rating} out of 5 stars">${stars(r.rating)}</div><h3>${escapeHtml(r.reviewer_name)}</h3><p>${escapeHtml(r.review_text)}</p></article>`).join('') : '';
+  }
+
+  if (reviewForm) reviewForm.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if (!supabaseClient) { reviewStatus.textContent = 'The review system is not connected yet. Complete the Supabase setup, then add the project URL and publishable key to this website.'; return; }
+    const fd = new FormData(reviewForm);
+    const name = String(fd.get('reviewer_name') || '').trim();
+    const rating = Number(fd.get('rating'));
+    const text = String(fd.get('review_text') || '').trim();
+    if (!name || !rating || !text) return;
+    const { error } = await supabaseClient.from('reviews').insert({ reviewer_name:name, rating, review_text:text, approved:false, source:'website' });
+    if (error) { console.error(error); reviewStatus.textContent = 'We could not submit your review right now. Please try again.'; return; }
+    reviewForm.reset();
+    reviewStatus.textContent = 'Thank you! Your review was submitted and will appear after approval.';
+  });
+  loadApprovedReviews();
 
   const form = document.getElementById('quoteForm');
   if (form) form.addEventListener('submit', function(e){ if(this.website.value){e.preventDefault();return} });
