@@ -2,6 +2,15 @@
 
 <html lang="en"><head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPD96277PQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KPD96277PQ');
+</script>
+
 <title>1NNEWAYY RENOVATIONS | Tampa Bay Renovations</title>
 <meta content="1NNEWAYY RENOVATIONS — Florida renovation services including flooring, drywall, painting, electrical, plumbing and more. Serving Hillsborough, Polk, Pinellas, Pasco, Hernando and Citrus counties." name="description"/>
 <meta content="#e8ece7" name="theme-color"/>
@@ -675,6 +684,36 @@ footer .small{color:rgba(255,255,255,.72)}
 
 <script>
 (() => {
+  // 1NNEWAYY RENOVATIONS custom GA4 lead/conversion tracking
+  const sendEvent = (name, params = {}) => {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params);
+  };
+
+  document.addEventListener('click', (event) => {
+    const el = event.target.closest('a,button');
+    if (!el) return;
+    const href = el.getAttribute('href') || '';
+
+    if (href.startsWith('tel:')) sendEvent('click_call_us', { link_url: href });
+    else if (href.startsWith('mailto:')) sendEvent('click_email_us', { link_url: href });
+    else if (href.includes('google.com/maps')) sendEvent('click_service_area_map', { link_url: href });
+    else if (href.includes('g.page/r/CcpuRI50pRSLEAE/review')) sendEvent('google_review_click');
+
+    if (el.dataset.page === 'estimate') sendEvent('request_estimate_start');
+  });
+
+  document.addEventListener('submit', (event) => {
+    const form = event.target;
+    if (form && form.id === 'reviewForm') sendEvent('review_submit');
+    if (form && form.id === 'estimateForm') sendEvent('estimate_submit');
+  });
+
+  document.addEventListener('play', (event) => {
+    if (event.target && event.target.tagName === 'VIDEO') {
+      sendEvent('video_play', { video_title: event.target.closest('.work-video-card')?.querySelector('h3')?.textContent?.trim() || 'Our Work video' });
+    }
+  }, true);
+
   const pageSections = [...document.querySelectorAll('.site-page')];
   const navLinks = [...document.querySelectorAll('.nav a[data-page]')];
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
