@@ -10,11 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const pauseBtn = document.querySelector('.slide-pause');
     const slideLinks = [...document.querySelectorAll('[data-slide-link]')];
 
-    function indexFromHash() {
+    function requestedSlide() {
+      const query = new URLSearchParams(location.search);
+      const querySlide = parseInt(query.get('slide') || '', 10);
+      if (Number.isFinite(querySlide) && querySlide >= 1 && querySlide <= slides.length) return querySlide - 1;
       const m = location.hash.match(/^#slide-(\d+)$/);
       if (!m) return 0;
-      const n = parseInt(m[1], 10);
-      return Number.isFinite(n) && n >= 1 && n <= slides.length ? n - 1 : 0;
+      const hashSlide = parseInt(m[1], 10);
+      return Number.isFinite(hashSlide) && hashSlide >= 1 && hashSlide <= slides.length ? hashSlide - 1 : 0;
     }
 
     function updateNav() {
@@ -52,8 +55,24 @@ document.addEventListener('DOMContentLoaded', () => {
       isPaused = !isPaused;
       go(i, false);
     });
-    window.addEventListener('hashchange', () => go(indexFromHash(), false));
-    go(indexFromHash(), false);
+
+    // Header slide links: navigate directly to the requested slide without a
+    // second click. Query parameters are used for reliable cross-page entry,
+    // while hash links remain supported for backward compatibility.
+    slideLinks.forEach(a => {
+      a.addEventListener('click', event => {
+        const target = Number(a.dataset.slideLink);
+        if (!Number.isFinite(target) || target < 1 || target > slides.length) return;
+        if (location.pathname.endsWith('/index.html') || location.pathname === '/' || location.pathname === '') {
+          event.preventDefault();
+          go(target - 1, false);
+          history.replaceState(null, '', 'index.html?slide=' + target);
+        }
+      });
+    });
+
+    window.addEventListener('hashchange', () => go(requestedSlide(), false));
+    go(requestedSlide(), false);
   }
 
   document.querySelectorAll('[data-star]').forEach(b => b.addEventListener('click', () => {
