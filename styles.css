@@ -3,3 +3,25 @@
 
 /* Landscape presentation for Our Work videos */
 .work-videos{max-width:1200px;margin:0 auto}.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.work-video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#090b0c;border:1px solid #333;overflow:hidden}.work-video{display:block;width:100%;height:100%;object-fit:cover;object-position:center;background:#090b0c}.video-play-overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;border:1px solid var(--g2);border-radius:50%;width:58px;height:58px;background:#090b0dcc;color:var(--g2);font-size:24px;cursor:pointer}.video-sound-button{position:absolute;right:18px;bottom:18px;z-index:4;width:50px;height:50px;border-radius:50%;border:1px solid var(--g2);background:#090b0ddd;color:#fff;font-size:21px;cursor:pointer}.video-sound-hint{position:absolute;right:80px;bottom:29px;z-index:3;background:#090b0ddd;color:#fff;padding:9px 13px;font-size:13px}.work-video-card h3{font:400 30px Georgia,serif;margin:14px 0 5px}.work-video-card p{color:#555;line-height:1.5;margin-top:0}@media(max-width:760px){.video-grid{grid-template-columns:1fr}.video-sound-hint{display:none}}
+
+/* FINAL SURGICAL FOOTER SIZE REVISION — footer treatment only */
+.footer{padding:30px 20px 18px;border-top-width:1px}
+.flogo{width:min(320px,52vw)}
+.tag{font-size:19px;margin:7px 0 22px}
+.touch{gap:22px;margin-bottom:17px}
+.touch:before,.touch:after{width:135px}
+.touch span{letter-spacing:4px;font-size:14px}
+.fbuttons{gap:15px}
+.fbuttons a{min-width:190px;padding:12px 14px;border-radius:8px;font-size:14px}
+.legal{margin-top:22px;padding-top:12px;font-size:12px}
+@media(max-width:700px){
+  .footer{padding:26px 16px 15px}
+  .flogo{width:105px}
+  .tag{font-size:16px;margin:6px 0 18px}
+  .touch{gap:16px;margin-bottom:14px}
+  .touch:before,.touch:after{width:36px}
+  .touch span{font-size:12px;letter-spacing:3px}
+  .fbuttons{gap:10px}
+  .fbuttons a{min-width:175px;padding:11px 12px;font-size:13px}
+  .legal{margin-top:18px;padding-top:10px;font-size:11px}
+}
