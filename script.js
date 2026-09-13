@@ -111,3 +111,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+/* Review system — public publishable key; database permissions must be enforced by Supabase RLS. */
+(() => {
+  const SUPABASE_URL = 'https://vhwydkhqnwcatjgvivdp.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_8dkgxiff3N966UjAyBSORw_qc6t1F3X';
+  const reviewForm = document.getElementById('reviewForm');
+  const reviewStatus = document.getElementById('reviewStatus');
+  const liveReviews = document.getElementById('liveReviews');
+  const supabaseReady = !!(window.supabase && SUPABASE_URL.startsWith('https://') && SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_'));
+  const supabaseClient = supabaseReady ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY) : null;
+
+  const stars = n => '★'.repeat(Math.max(0, Math.min(5, Number(n)))) + '☆'.repeat(Math.max(0, 5 - Number(n)));
+  const escapeHtml = value => { const d = document.createElement('div'); d.textContent = value ?? ''; return d.innerHTML; };
+
+  async function loadApprovedReviews(){
+    if (!supabaseClient || !liveReviews) return;
+    const { data, error } = await supabaseClient.from('reviews')
+      .select('reviewer_name,rating,review_text,created_at')
+      .eq('approved', true)
+      .order('created_at', { ascending:false });
+    if (error) { console.error(error); return; }
+    liveReviews.innerHTML = (data || []).map(r =>
+      `<article class="card"><div aria-label="${Number(r.rating)} out of 5 stars">${stars(r.rating)}</div><h3>${escapeHtml(r.reviewer_name)}</h3><p>${escapeHtml(r.review_text)}</p></article>`
+    ).join('');
+  }
+
+  if (reviewForm) reviewForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    if (reviewStatus) reviewStatus.textContent = '';
+    const fd = new FormData(reviewForm);
+    if (String(fd.get('website') || '').trim()) return;
+    const name = String(fd.get('reviewer_name') || '').trim();
+    const rating = Number(fd.get('rating'));
+    const text = String(fd.get('review_text') || '').trim();
+    if (!name || !Number.isInteger(rating) || rating < 1 || rating > 5 || !text) {
+      if (reviewStatus) reviewStatus.textContent = 'Please enter your name, select a star rating, and tell us about your experience.';
+      return;
+    }
+    if (!supabaseClient) {
+      if (reviewStatus) reviewStatus.textContent = 'The review system is temporarily unavailable. Please use the Google Review option instead.';
+      return;
+    }
+    const submit = reviewForm.querySelector('button[type="submit"]');
+    if (submit) { submit.disabled = true; submit.textContent = 'Submitting…'; }
+    const { error } = await supabaseClient.from('reviews').insert({
+      reviewer_name:name, rating, review_text:text, approved:false, source:'website'
+    });
+    if (error) {
+      console.error(error);
+      if (reviewStatus) reviewStatus.textContent = 'We could not submit your review right now. Please try again.';
+    } else {
+      reviewForm.reset();
+      if (reviewStatus) reviewStatus.textContent = 'Thank you! Your review was submitted and will appear after approval.';
+    }
+    if (submit) { submit.disabled = false; submit.textContent = 'Submit Review'; }
+  });
+
+  loadApprovedReviews();
+})();
