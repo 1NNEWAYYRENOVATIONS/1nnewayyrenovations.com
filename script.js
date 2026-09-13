@@ -6,41 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
   if (slides.length && dots && counter) {
     let i = 0;
     let timer;
+    let isPaused = false;
+    const pauseBtn = document.querySelector('.slide-pause');
     const slideLinks = [...document.querySelectorAll('[data-slide-link]')];
 
-    function requestedIndex() {
-      const params = new URLSearchParams(window.location.search);
-      const q = parseInt(params.get('slide') || '', 10);
-      if (Number.isFinite(q) && q >= 1 && q <= slides.length) return q - 1;
-      const m = window.location.hash.match(/^#slide-(\d+)$/);
-      if (m) {
-        const h = parseInt(m[1], 10);
-        if (Number.isFinite(h) && h >= 1 && h <= slides.length) return h - 1;
-      }
-      return 0;
+    function indexFromHash() {
+      const m = location.hash.match(/^#slide-(\d+)$/);
+      if (!m) return 0;
+      const n = parseInt(m[1], 10);
+      return Number.isFinite(n) && n >= 1 && n <= slides.length ? n - 1 : 0;
     }
 
     function updateNav() {
-      slideLinks.forEach(a => {
-        const n = Number(a.dataset.slideLink);
-        a.classList.toggle('active', n === i + 1);
-      });
+      slideLinks.forEach(a => a.classList.toggle('active', Number(a.dataset.slideLink) === i + 1));
     }
 
-    function go(n, updateUrl = true) {
+    function go(n, writeHash = true) {
       i = (n + slides.length) % slides.length;
-      slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
-      [...dots.children].forEach((d, idx) => d.classList.toggle('active', idx === i));
+      slides.forEach((s, n) => s.classList.toggle('active', n === i));
+      [...dots.children].forEach((d, n) => d.classList.toggle('active', n === i));
       counter.textContent = String(i + 1).padStart(2, '0') + ' / ' + slides.length;
       updateNav();
-      if (updateUrl) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('slide', String(i + 1));
-        url.hash = '';
-        history.replaceState(null, '', url.pathname + '?' + url.searchParams.toString());
-      }
+      if (writeHash) history.replaceState(null, '', '#slide-' + (i + 1));
       clearInterval(timer);
-      timer = setInterval(() => go(i + 1), 6500);
+      if (!isPaused) timer = setInterval(() => go(i + 1), 6500);
+      if (pauseBtn) {
+        pauseBtn.textContent = isPaused ? '▶ Play' : '⏸ Pause';
+        pauseBtn.setAttribute('aria-pressed', String(isPaused));
+        pauseBtn.setAttribute('aria-label', isPaused ? 'Resume automatic slide advance' : 'Pause automatic slide advance');
+      }
     }
 
     slides.forEach((_, n) => {
@@ -48,15 +42,18 @@ document.addEventListener('DOMContentLoaded', () => {
       b.className = 'dot';
       b.type = 'button';
       b.setAttribute('aria-label', 'Go to slide ' + (n + 1));
-      b.addEventListener('click', () => go(n));
+      b.onclick = () => go(n);
       dots.appendChild(b);
     });
 
     document.querySelector('.prev')?.addEventListener('click', () => go(i - 1));
     document.querySelector('.next')?.addEventListener('click', () => go(i + 1));
-    window.addEventListener('popstate', () => go(requestedIndex(), false));
-    window.addEventListener('hashchange', () => go(requestedIndex(), false));
-    go(requestedIndex(), false);
+    pauseBtn?.addEventListener('click', () => {
+      isPaused = !isPaused;
+      go(i, false);
+    });
+    window.addEventListener('hashchange', () => go(indexFromHash(), false));
+    go(indexFromHash(), false);
   }
 
   document.querySelectorAll('[data-star]').forEach(b => b.addEventListener('click', () => {
