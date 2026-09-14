@@ -43,6 +43,13 @@
 /* DEDICATED CALL US PAGE — PRESERVES LOCKED VISUAL SYSTEM */
 .contacts a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:150px;transition:transform .2s,border-color .2s,color .2s}.contacts a:hover{transform:translateY(-2px);border-color:var(--g2);color:var(--g2)}.contacts a strong{font-size:18px}.contacts a small{color:#d8d8d8;font-size:12px;font-weight:400}.contact-icon{font-size:30px;line-height:1;color:var(--g2);margin-bottom:3px}.call-info-grid{max-width:1100px;margin:0 auto 22px}.call-info-card{text-align:center}.call-info-card .eyebrow{color:#777;font-size:10px}.call-info-card h2{font-size:27px;margin:8px 0}.call-info-card p{min-height:76px;margin-bottom:18px}.business-card{max-width:850px;margin:22px auto;text-align:center}.business-card .eyebrow{color:#777;font-size:10px}.business-card h2{font-size:28px;margin:8px 0 18px}.business-card p{display:inline-block;vertical-align:top;min-width:210px;margin:8px 15px;line-height:1.7;color:#555}.business-card a{color:#171819;font-weight:700}.call-cta{max-width:850px;margin:28px auto 0;text-align:center;padding:28px;background:#111;color:#fff;border:1px solid #444}.call-cta h2{font:400 30px Georgia,serif;margin:0 0 8px}.call-cta p{color:#ddd;margin:0 0 18px}@media(max-width:700px){.call-info-card p{min-height:0}.business-card p{display:block;min-width:0;margin:10px auto}.call-cta{padding:24px 18px}.call-cta h2{font-size:26px}}
 
+
+/* FINAL REVISION — TRUE BLACK / METALLIC GOLD / FOUR-CARD CALL US */
+:root{--true-black:#000;--metal-gold:#D4AF37;--metal-gold-light:#F4E3A1;--metal-gold-dark:#8F6B12;--gold:#D4AF37;--gold2:#F4E3A1;--b:#000;--g:#D4AF37;--g2:#F4E3A1;--ink:#000}
+html,body{background:#000;color:#000}.site-header,.nav a,.footer,.call-action{background:#000}.site-header{border-bottom-color:#D4AF37}.page,.call-page{background:#f3f3ef;color:#000}.call-title,.call-hero,.call-lead{text-align:center}.call-line{margin-left:auto;margin-right:auto}.call-actions{max-width:1180px;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-left:auto;margin-right:auto}.call-action{min-height:155px;padding:24px 14px;border-color:#4d4d4d;box-shadow:inset 0 2px 0 #D4AF37}.call-location{display:contents}.call-location .call-action{display:flex}.call-action:hover{border-color:#F4E3A1}.call-gold-btn{background:#D4AF37;border-color:#D4AF37;color:#000}.call-gold-btn:hover{background:#F4E3A1}.call-page{ text-align:center }.call-business{display:none}.page:after{background:linear-gradient(90deg,transparent,#8F6B12 0%,#D4AF37 28%,#F4E3A1 50%,#D4AF37 72%,#8F6B12 100%,transparent)}
+@media(max-width:900px){.call-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.call-actions{grid-template-columns:1fr}.call-location{display:block}.call-location .call-action{margin-top:14px}}
+
 </style>
 <style>
 /* CALL US — DEDICATED PAGE LAYER. Does not alter the locked site foundation. */
@@ -104,11 +111,11 @@ body{background:var(--b);color:var(--ink);font-family:Arial,sans-serif}
 .card p,.article p,.call-card p,.call-business p{color:#555;line-height:1.7}
 .grid{gap:20px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .grid .card{position:relative;border-top:3px solid var(--gold);min-height:220px}
-.grid .card .eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:10px;font-weight:800;color:#8b6911!important}
+.grid .card .eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:10px;font-weight:800;color:#D4AF37!important}
 .btn{border-radius:3px;padding:12px 18px;letter-spacing:.02em;transition:.2s ease}
 .btn.gold{background:var(--gold);border-color:var(--gold);color:#111}.btn.gold:hover{background:var(--gold2);border-color:var(--gold2)}
 .btn.dark{background:#111;color:#fff;border-color:#111}.btn.dark:hover{background:#272929;border-color:var(--gold)}
-.btn.outline{background:#fff;color:#111;border-color:#555}.btn.outline:hover{border-color:var(--gold);color:#7a5c0d}
+.btn.outline{background:#fff;color:#111;border-color:#555}.btn.outline:hover{border-color:var(--gold);color:#8F6B12}
 .areas{max-width:1000px;margin:30px 0;grid-template-columns:repeat(5,1fr);gap:12px}
 .areas div{background:#111;color:#fff;border:1px solid #444;padding:19px 10px;letter-spacing:.1em;font-size:12px;box-shadow:inset 0 2px 0 var(--gold);}
 .form{max-width:820px;margin:0;gap:13px}.form input,.form select,.form textarea{background:#fff;border:1px solid #999;border-radius:2px;padding:15px;color:#171819}.form input:focus,.form select:focus,.form textarea:focus{outline:1px solid var(--gold);border-color:var(--gold)}
@@ -118,7 +125,7 @@ body{background:var(--b);color:var(--ink);font-family:Arial,sans-serif}
 .portfolio{gap:20px}.portfolio figure{background:#111;padding:7px;border:1px solid #4a4b4b;border-radius:0}.portfolio figcaption{padding:12px;color:#fff;font-family:Georgia,serif;font-weight:400;letter-spacing:.03em}
 .section-heading{font-family:Georgia,serif;font-weight:400;font-size:38px;color:#171819;text-align:left;border-bottom:1px solid #bbb;padding-bottom:10px;position:relative}.section-heading:after{content:"";position:absolute;left:0;bottom:-1px;width:90px;height:2px;background:var(--gold)}
 .work-videos{max-width:1200px;margin:26px 0 46px}.video-grid{gap:22px}.work-video-card{padding:12px;border-top:3px solid var(--gold)}.work-video-frame{border:1px solid #333;border-radius:0}.work-video-card h3{font:400 28px Georgia,serif;color:#171819}.work-video-card p{color:#555}
-.bloghero{background:#111;border:1px solid #555;border-top:3px solid var(--gold);border-radius:0;padding:38px 30px;text-align:left}.bloghero h1{font:400 clamp(42px,6vw,66px) Georgia,serif;color:var(--gold2);margin:6px 0 10px}.bloghero p{margin:0 0 20px;color:#ddd;max-width:800px;line-height:1.7}.cats{text-align:left;margin:20px 0}.cats button{border-radius:3px;background:#111;border:1px solid #777;padding:9px 14px;color:#fff}.cats button.active,.cats button:hover{border-color:var(--gold2);color:var(--gold2)}.articles{gap:20px}.article{border-top:3px solid var(--gold)}.article h2{font-size:25px}.article a{color:#8b6911!important}
+.bloghero{background:#111;border:1px solid #555;border-top:3px solid var(--gold);border-radius:0;padding:38px 30px;text-align:left}.bloghero h1{font:400 clamp(42px,6vw,66px) Georgia,serif;color:var(--gold2);margin:6px 0 10px}.bloghero p{margin:0 0 20px;color:#ddd;max-width:800px;line-height:1.7}.cats{text-align:left;margin:20px 0}.cats button{border-radius:3px;background:#111;border:1px solid #777;padding:9px 14px;color:#fff}.cats button.active,.cats button:hover{border-color:var(--gold2);color:var(--gold2)}.articles{gap:20px}.article{border-top:3px solid var(--gold)}.article h2{font-size:25px}.article a{color:#D4AF37!important}
 .contacts{max-width:1000px;margin:28px 0;gap:18px}.contacts a{background:#111;border:1px solid #555;border-radius:0;color:#fff;padding:24px;box-shadow:inset 0 2px 0 var(--gold)}
 .call-page{position:relative;max-width:none;margin:18px;padding:54px 22px 72px;background:var(--paper);border:1px solid #3b3e3f;border-top:2px solid var(--gold);overflow:hidden}.call-page:before{content:"";position:absolute;top:24px;right:34px;width:118px;height:72px;background:url('logo.png') center/contain no-repeat}.call-hero,.call-actions,.call-section,.call-business,.call-cta{position:relative;z-index:1}.call-hero{max-width:1120px;margin:0 auto 34px;text-align:left}.call-eyebrow{font-family:"Brush Script MT","Segoe Script",cursive;font-size:23px;letter-spacing:.05em;color:#252728}.call-title{font:400 clamp(48px,6vw,78px) Georgia,serif;text-align:left;margin:4px 0 8px}.call-line{width:165px;height:1px;background:#7b7d7c;margin:13px 0 20px;position:relative}.call-line:after{content:"";position:absolute;left:0;top:-1px;width:74px;height:2px;background:var(--gold)}.call-lead{max-width:850px;margin:0;color:#414445;text-align:left;line-height:1.7}.call-actions,.call-section{max-width:1120px}.call-action{border-radius:0;background:#111;border:1px solid #555;box-shadow:inset 0 2px 0 var(--gold)}.call-action:hover{border-color:var(--gold2)}.call-card{border-top:3px solid var(--gold)}.call-gold-btn{border-radius:3px;background:var(--gold);border-color:var(--gold);color:#111}.call-gold-btn:hover{background:var(--gold2)}
 .footer{background:#0b0d0e;border-top:1px solid var(--gold);padding:28px 20px 16px}.flogo{width:min(300px,50vw)}.tag{font:400 18px Georgia,serif}.touch:before,.touch:after{background:#555}.fbuttons a{border-radius:3px;border-color:#666}.fbuttons a:hover{border-color:var(--gold2);color:var(--gold2)}
@@ -128,8 +135,123 @@ body{background:var(--b);color:var(--ink);font-family:Arial,sans-serif}
 @media(max-width:700px){.nav{justify-content:flex-start}.page{margin:7px;padding:38px 13px 50px}.page:before{top:14px;right:13px;width:72px;height:48px}.eyebrow,.call-eyebrow{font-size:20px}.goldline,.call-line{width:120px}.lead{font-size:14px}.card,.article,.call-card,.call-business{padding:21px}.faqitem summary{font-size:19px;padding:19px 48px 19px 18px}.faqanswer{padding:0 18px 19px}.section-heading{font-size:31px}.call-page{margin:7px;padding:38px 13px 50px}.call-page:before{top:14px;right:13px;width:72px;height:48px}.call-title{font-size:clamp(42px,12vw,62px)}.call-lead{font-size:14px}.fbuttons a{min-width:165px}}
 
 </style>
+<style>
+/* FINAL REQUESTED COLOR / LAYOUT REVISION — surgical changes only */
+:root{
+  --true-black:#000000;
+  --metal-gold:#D4AF37;
+  --metal-gold-light:#F4E3A1;
+  --metal-gold-dark:#8F6B12;
+  --metal-gold-gradient:linear-gradient(90deg,#8F6B12 0%,#D4AF37 24%,#F4E3A1 50%,#D4AF37 76%,#8F6B12 100%);
+}
+
+/* Requested true-black / true-metallic-gold normalization */
+.site-header,.nav a,.footer,.home,.stage,.portfolio figure{background:#000000}
+.site-header{border-bottom-color:#D4AF37}
+.nav a:hover,.nav a.active{color:#F4E3A1;border-color:#D4AF37}
+
+/* SERVICES — six individual service boxes: black field + white body text.
+   Category titles and Learn More buttons intentionally remain gold treatment. */
+.grid.g3 > .card{
+  background:#000000;
+  border-color:#3d3d3d;
+  border-top-color:#D4AF37;
+  color:#FFFFFF;
+}
+.grid.g3 > .card h3{color:#FFFFFF}
+.grid.g3 > .card p{color:#FFFFFF}
+.grid.g3 > .card .eyebrow{color:#D4AF37!important}
+.grid.g3 > .card .btn.gold{background:#D4AF37;color:#000000;border-color:#D4AF37}
+
+/* OUR WORK — four video cards: true-black field + metallic-gold typography. */
+.work-video-card{
+  background:#000000;
+  border-color:#3d3d3d;
+  border-top-color:#D4AF37;
+  color:#D4AF37;
+}
+.work-video-card h3,
+.work-video-card p{color:#D4AF37}
+.work-video-card .video-play-overlay,
+.work-video-card .video-sound-button{border-color:#D4AF37;color:#D4AF37;background:#000000}
+.work-video-card .video-sound-hint{background:#000000;color:#D4AF37}
+
+/* REVIEWS — form fields black with white text; both review buttons gold/black. */
+#reviewForm input:not([type="hidden"]),
+#reviewForm textarea,
+#reviewForm select{
+  background:#000000;
+  color:#FFFFFF;
+  border-color:#D4AF37;
+  caret-color:#FFFFFF;
+}
+#reviewForm input::placeholder,
+#reviewForm textarea::placeholder{color:#FFFFFF;opacity:.88}
+#reviewForm .btn.dark,
+#reviewForm .btn.outline{
+  background:#D4AF37;
+  color:#000000;
+  border-color:#D4AF37;
+}
+#reviewForm .btn.dark:hover,
+#reviewForm .btn.outline:hover{background:#F4E3A1;color:#000000;border-color:#F4E3A1}
+#reviewForm .stars button{color:#666}
+#reviewForm .stars button.selected{color:#D4AF37}
+#liveReviews .card{
+  background:#000000;
+  border-color:#D4AF37;
+  border-top-color:#D4AF37;
+  color:#D4AF37;
+}
+#liveReviews .card h3,
+#liveReviews .card p,
+#liveReviews .card div{color:#D4AF37}
+
+/* F&Q — question fields are true black with white question text. */
+.faqitem summary{
+  background:#000000;
+  color:#FFFFFF!important;
+  border-color:#000000;
+}
+.faqitem summary:after{color:#D4AF37}
+.faqitem[open] summary{border-bottom:1px solid #D4AF37}
+/* Answers remain readable true-black text as previously requested. */
+.faqanswer{color:#000000!important}
+
+/* CALL US — four individual contact boxes stay in one horizontal row on desktop. */
+.call-actions{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  max-width:1180px;
+  gap:14px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.call-action{
+  background:#000000;
+  color:#D4AF37;
+  border-color:#3d3d3d;
+  box-shadow:inset 0 2px 0 #D4AF37;
+  text-align:center;
+}
+.call-action strong,
+.call-action span{color:#D4AF37}
+.call-action .icon{color:#D4AF37}
+.call-page,.call-hero,.call-title,.call-lead{text-align:center}
+.call-title,.call-eyebrow,.call-lead,.call-line{margin-left:auto;margin-right:auto}
+@media(max-width:900px){.call-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.call-actions{grid-template-columns:1fr}}
+
+/* BLOG — centered article content; supplied Renovation Knowledge/Homeowner Resources blocks removed. */
+.centered-inner-page .articles{justify-items:stretch}
+.centered-inner-page .article{text-align:center}
+.centered-inner-page .article .eyebrow{text-align:center!important}
+.centered-inner-page .cats{text-align:center}
+
+/* Preserve metallic-gold character for principal accent rules without changing structure. */
+.goldline:after,.call-line:after{background:var(--metal-gold-gradient)}
+</style>
 </head>
-<body>
+<body class="centered-inner-page">
 <header class="site-header">
 <nav class="nav" aria-label="Primary navigation">
 <a href="index.html?slide=1">Home</a>
@@ -164,23 +286,14 @@ body{background:var(--b);color:var(--ink);font-family:Arial,sans-serif}
 <a class="call-action" href="https://www.google.com/maps/search/?api=1&amp;query=1nnewayy+Renovations+Riverview+FL" target="_blank" rel="noopener noreferrer" aria-label="Open service area map">
 <span class="icon" aria-hidden="true">✥</span><strong>Service Area Map</strong><span>View our service-area location</span>
 </a>
+<a class="call-action" href="https://www.google.com/maps/search/?api=1&amp;query=Riverview+Florida" target="_blank" rel="noopener noreferrer" aria-label="View business location in Riverview, Florida">
+<span class="icon" aria-hidden="true">⌖</span><strong>Location</strong><span>Riverview, Florida</span>
+</a>
 </section>
 
-<section class="call-section" aria-label="Ways to connect">
-<article class="call-card"><div class="label">PHONE</div><h2>Speak With Us</h2><p>Have a question about a renovation, project scope, or the next step? Call us directly.</p><a class="call-btn" href="tel:+18889138677">Call 1-888-913-8677</a></article>
-<article class="call-card"><div class="label">EMAIL</div><h2>Send a Message</h2><p>Tell us what you are planning and provide the best way to reach you.</p><a class="call-btn" href="mailto:contact@1nnewayyrenovations.com">Email 1NNEWAYY</a></article>
-<article class="call-card"><div class="label">SERVICE AREA</div><h2>Find Our Service Area</h2><p>Use the map to explore the service-area location associated with 1NNEWAYY RENOVATIONS LLC.</p><a class="call-btn" href="https://www.google.com/maps/search/?api=1&amp;query=1nnewayy+Renovations+Riverview+FL" target="_blank" rel="noopener noreferrer">Open Service Area Map</a></article>
-</section>
 
-<section class="call-business" aria-label="Business information">
-<div class="label">BUSINESS INFORMATION</div>
-<h2>1NNEWAYY RENOVATIONS LLC</h2>
-<div class="business-items">
-<div class="business-item"><b>Location</b><br>Riverview, Florida</div>
-<div class="business-item"><b>Phone</b><br><a href="tel:+18889138677">1-888-913-8677</a></div>
-<div class="business-item"><b>Email</b><br><a href="mailto:contact@1nnewayyrenovations.com">contact@1nnewayyrenovations.com</a></div>
-</div>
-</section>
+
+
 
 <section class="call-cta">
 <h2>Ready to take the next step?</h2>

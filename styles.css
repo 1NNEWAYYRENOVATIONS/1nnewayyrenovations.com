@@ -72,3 +72,186 @@ body{background:var(--b);color:var(--ink);font-family:Arial,sans-serif}
 .stage{border:1px solid #373a3b;box-shadow:0 0 0 1px #d6a51f22}.arrow{border-color:var(--gold2)}
 @media(max-width:850px){.g3{grid-template-columns:1fr}.page{margin:10px;padding:42px 16px 58px}.page:before{right:18px;width:90px;height:56px}.title{font-size:clamp(42px,12vw,62px)}.areas{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:700px){.nav{justify-content:flex-start}.page{margin:7px;padding:38px 13px 50px}.page:before{top:14px;right:13px;width:72px;height:48px}.eyebrow,.call-eyebrow{font-size:20px}.goldline,.call-line{width:120px}.lead{font-size:14px}.card,.article,.call-card,.call-business{padding:21px}.faqitem summary{font-size:19px;padding:19px 48px 19px 18px}.faqanswer{padding:0 18px 19px}.section-heading{font-size:31px}.call-page{margin:7px;padding:38px 13px 50px}.call-page:before{top:14px;right:13px;width:72px;height:48px}.call-title{font-size:clamp(42px,12vw,62px)}.call-lead{font-size:14px}.fbuttons a{min-width:165px}}
+
+
+/* FINAL REVISION — TRUE BLACK / METALLIC GOLD + CENTERED INNER PAGES */
+/* Palette normalization: true black + metallic gold */
+:root{--b:#000000;--g:#D4AF37;--g2:#F4E3A1;--gold:#D4AF37;--gold2:#F4E3A1;--ink:#000000}
+:root{
+  --true-black:#000000;
+  --metal-gold:#D4AF37;
+  --metal-gold-light:#F4E3A1;
+  --metal-gold-dark:#8F6B12;
+  --metallic-gold:linear-gradient(90deg,#8F6B12 0%,#D4AF37 28%,#F4E3A1 50%,#D4AF37 72%,#8F6B12 100%);
+  --ink:#000000;
+}
+html,body{background:var(--true-black);color:var(--ink)}
+.site-header,.nav a,.btn.dark,.dark,.footer,.home,.stage,.portfolio figure,.areas div,.cats button{background:#000000}
+.site-header{border-bottom-color:var(--metal-gold)}
+.nav a:hover,.nav a.active{color:var(--metal-gold-light);border-color:var(--metal-gold)}
+.page,.call-page{background:#f3f3ef;color:#000}
+.page,.call-page{border-top-color:var(--metal-gold)}
+.page:after{background:var(--metallic-gold)}
+.title,.section-heading,.card h2,.card h3,.article h2,.call-card h2,.call-title,.call-business h2{color:#000000}
+.goldline:after,.call-line:after{background:var(--metal-gold)}
+.btn.gold,.call-gold-btn{background:var(--metal-gold);border-color:var(--metal-gold);color:#000}
+.btn.gold:hover,.call-gold-btn:hover{background:var(--metal-gold-light);border-color:var(--metal-gold)}
+.grid .card,.article,.call-card,.work-video-card{border-top-color:var(--metal-gold)}
+.areas div,.contacts a,.call-action{box-shadow:inset 0 2px 0 var(--metal-gold)}
+.arrow,.slide-pause,.video-play-overlay,.video-sound-button{border-color:var(--metal-gold);color:var(--metal-gold-light)}
+.dot.active{background:var(--metal-gold)}
+.stars button.selected{color:var(--metal-gold)}
+
+/* Requested centering: Services, Our Work, Reviews, Request Estimate, Call Us, Blog, F&Q */
+body.centered-inner-page .page .inner,
+body.centered-inner-page .call-page{ text-align:center }
+.centered-inner-page .lead{margin-left:auto;margin-right:auto;text-align:center}
+.centered-inner-page .title,.centered-inner-page .eyebrow,.centered-inner-page .section-heading{text-align:center}
+.centered-inner-page .goldline,.centered-inner-page .section-heading:after{left:auto;right:auto;margin-left:auto;margin-right:auto}
+.centered-inner-page .grid{justify-items:stretch}
+.centered-inner-page .card,.centered-inner-page .article,.centered-inner-page .work-video-card,.centered-inner-page .call-card{text-align:center}
+.centered-inner-page .card .eyebrow,.centered-inner-page .article .eyebrow{text-align:center!important}
+.centered-inner-page .form{margin-left:auto;margin-right:auto;text-align:center}
+.centered-inner-page .form input,.centered-inner-page .form select,.centered-inner-page .form textarea{text-align:center}
+.centered-inner-page .form .btn{justify-self:center}
+.centered-inner-page .work-videos,.centered-inner-page .call-actions,.centered-inner-page .call-section,.centered-inner-page .call-hero{margin-left:auto;margin-right:auto}
+.centered-inner-page .call-hero,.centered-inner-page .call-lead,.centered-inner-page .call-line{text-align:center}
+.centered-inner-page .call-line{margin-left:auto;margin-right:auto}
+.centered-inner-page .cats{margin-left:auto;margin-right:auto;text-align:center}
+.centered-inner-page .articles{justify-items:stretch}
+.centered-inner-page .portfolio{justify-items:stretch}
+.centered-inner-page .section-heading{border-bottom-color:#b9b9b3}
+
+/* Call Us: four individual black contact boxes in one row; responsive collapse retained on small screens. */
+.call-actions{max-width:1180px;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.call-action{min-height:155px;padding:24px 14px;background:#000;border-color:#4d4d4d}
+.call-location{max-width:1180px;margin:0 auto 34px;display:contents}
+.call-location .call-action{display:flex}
+@media(max-width:900px){.call-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.call-actions{grid-template-columns:1fr}.call-location{display:block}.call-location .call-action{margin-top:14px}}
+
+/* F&Q: true black question and answer text on the light page. */
+.centered-inner-page .faqitem summary,
+.centered-inner-page .faqanswer,
+.faqitem summary,.faqanswer{color:#000000}
+.faqitem{border-left-color:var(--metal-gold)}
+.faqitem summary:after{color:var(--metal-gold)}
+
+/* Blog landing: the supplied Renovation Knowledge title bar has been intentionally removed. */
+.bloghero{display:none}
+
+
+/* FINAL REQUESTED COLOR / LAYOUT REVISION — surgical changes only */
+:root{
+  --true-black:#000000;
+  --metal-gold:#D4AF37;
+  --metal-gold-light:#F4E3A1;
+  --metal-gold-dark:#8F6B12;
+  --metal-gold-gradient:linear-gradient(90deg,#8F6B12 0%,#D4AF37 24%,#F4E3A1 50%,#D4AF37 76%,#8F6B12 100%);
+}
+
+/* Requested true-black / true-metallic-gold normalization */
+.site-header,.nav a,.footer,.home,.stage,.portfolio figure{background:#000000}
+.site-header{border-bottom-color:#D4AF37}
+.nav a:hover,.nav a.active{color:#F4E3A1;border-color:#D4AF37}
+
+/* SERVICES — six individual service boxes: black field + white body text.
+   Category titles and Learn More buttons intentionally remain gold treatment. */
+.grid.g3 > .card{
+  background:#000000;
+  border-color:#3d3d3d;
+  border-top-color:#D4AF37;
+  color:#FFFFFF;
+}
+.grid.g3 > .card h3{color:#FFFFFF}
+.grid.g3 > .card p{color:#FFFFFF}
+.grid.g3 > .card .eyebrow{color:#D4AF37!important}
+.grid.g3 > .card .btn.gold{background:#D4AF37;color:#000000;border-color:#D4AF37}
+
+/* OUR WORK — four video cards: true-black field + metallic-gold typography. */
+.work-video-card{
+  background:#000000;
+  border-color:#3d3d3d;
+  border-top-color:#D4AF37;
+  color:#D4AF37;
+}
+.work-video-card h3,
+.work-video-card p{color:#D4AF37}
+.work-video-card .video-play-overlay,
+.work-video-card .video-sound-button{border-color:#D4AF37;color:#D4AF37;background:#000000}
+.work-video-card .video-sound-hint{background:#000000;color:#D4AF37}
+
+/* REVIEWS — form fields black with white text; both review buttons gold/black. */
+#reviewForm input:not([type="hidden"]),
+#reviewForm textarea,
+#reviewForm select{
+  background:#000000;
+  color:#FFFFFF;
+  border-color:#D4AF37;
+  caret-color:#FFFFFF;
+}
+#reviewForm input::placeholder,
+#reviewForm textarea::placeholder{color:#FFFFFF;opacity:.88}
+#reviewForm .btn.dark,
+#reviewForm .btn.outline{
+  background:#D4AF37;
+  color:#000000;
+  border-color:#D4AF37;
+}
+#reviewForm .btn.dark:hover,
+#reviewForm .btn.outline:hover{background:#F4E3A1;color:#000000;border-color:#F4E3A1}
+#reviewForm .stars button{color:#666}
+#reviewForm .stars button.selected{color:#D4AF37}
+#liveReviews .card{
+  background:#000000;
+  border-color:#D4AF37;
+  border-top-color:#D4AF37;
+  color:#D4AF37;
+}
+#liveReviews .card h3,
+#liveReviews .card p,
+#liveReviews .card div{color:#D4AF37}
+
+/* F&Q — question fields are true black with white question text. */
+.faqitem summary{
+  background:#000000;
+  color:#FFFFFF!important;
+  border-color:#000000;
+}
+.faqitem summary:after{color:#D4AF37}
+.faqitem[open] summary{border-bottom:1px solid #D4AF37}
+/* Answers remain readable true-black text as previously requested. */
+.faqanswer{color:#000000!important}
+
+/* CALL US — four individual contact boxes stay in one horizontal row on desktop. */
+.call-actions{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  max-width:1180px;
+  gap:14px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.call-action{
+  background:#000000;
+  color:#D4AF37;
+  border-color:#3d3d3d;
+  box-shadow:inset 0 2px 0 #D4AF37;
+  text-align:center;
+}
+.call-action strong,
+.call-action span{color:#D4AF37}
+.call-action .icon{color:#D4AF37}
+.call-page,.call-hero,.call-title,.call-lead{text-align:center}
+.call-title,.call-eyebrow,.call-lead,.call-line{margin-left:auto;margin-right:auto}
+@media(max-width:900px){.call-actions{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.call-actions{grid-template-columns:1fr}}
+
+/* BLOG — centered article content; supplied Renovation Knowledge/Homeowner Resources blocks removed. */
+.centered-inner-page .articles{justify-items:stretch}
+.centered-inner-page .article{text-align:center}
+.centered-inner-page .article .eyebrow{text-align:center!important}
+.centered-inner-page .cats{text-align:center}
+
+/* Preserve metallic-gold character for principal accent rules without changing structure. */
+.goldline:after,.call-line:after{background:var(--metal-gold-gradient)}
+
