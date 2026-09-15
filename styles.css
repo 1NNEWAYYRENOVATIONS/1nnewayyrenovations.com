@@ -293,3 +293,65 @@ body.centered-inner-page .call-page{ text-align:center }
 /* F&Q — dropdown question tabs: true black background with white question text. */
 .faqitem summary{background:#000000 !important;color:#FFFFFF !important}
 .faqitem summary:after{color:#D4AF37 !important}
+
+
+/* FINAL REQUESTED REVISION — BLOG ARTICLE / PAUSE / F&Q / BLOG LANDING SURGICAL OVERRIDES */
+
+/* BLOG ARTICLE PAGES — slightly reduced article titles; planning cards true black with white text. */
+.blog-article-page .title{
+  font-size:clamp(42px,5.25vw,66px);
+  line-height:1.02;
+}
+.blog-article-page .card{
+  background:#000000 !important;
+  color:#FFFFFF !important;
+  border-color:#3d3d3d !important;
+  border-top-color:#D4AF37 !important;
+}
+.blog-article-page .card h2,
+.blog-article-page .card li,
+.blog-article-page .card p{
+  color:#FFFFFF !important;
+}
+.blog-article-page .card .btn.dark{
+  background:#D4AF37 !important;
+  color:#000000 !important;
+  border-color:#D4AF37 !important;
+}
+.blog-article-page .card .btn.dark:hover{
+  background:#F4E3A1 !important;
+  color:#000000 !important;
+  border-color:#F4E3A1 !important;
+}
+
+/* HOME PRESENTATION — pause control is invisible until the cursor hovers over the slide. */
+.stage .slide-pause{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .2s ease,visibility .2s ease;
+}
+.stage:hover .slide-pause{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+/* F&Q — question dropdown tabs are metallic gold with true-black text. */
+.faqitem summary,
+.faqitem[open] summary{
+  background:#D4AF37 !important;
+  color:#000000 !important;
+  border-color:#D4AF37 !important;
+}
+.faqitem summary:after{
+  color:#000000 !important;
+}
+
+/* BLOG LANDING — move the three aligned cards lower without changing their horizontal alignment or spacing. */
+.blog-landing-page .articles{
+  padding-top:90px;
+}
+@media(max-width:700px){
+  .blog-landing-page .articles{padding-top:70px}
+}
