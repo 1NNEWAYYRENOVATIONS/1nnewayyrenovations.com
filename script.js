@@ -194,3 +194,111 @@ document.addEventListener('DOMContentLoaded', () => {
 
   loadApprovedReviews();
 })();
+
+
+/* GA4 Lead Generation Tracking — 1NNEWAYY RENOVATIONS */
+(() => {
+  const MEASUREMENT_ID = 'G-KPD96277PQ';
+  const DATA_LAYER_NAME = 'dataLayer';
+
+  window[DATA_LAYER_NAME] = window[DATA_LAYER_NAME] || [];
+  window.gtag = window.gtag || function(){ window[DATA_LAYER_NAME].push(arguments); };
+
+  // Load GA4 once. This keeps the tracking implementation centralized and
+  // prevents duplicate Google tags if another tag is already present.
+  if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+    const ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+    document.head.appendChild(ga);
+  }
+
+  window.gtag('js', new Date());
+  window.gtag('config', MEASUREMENT_ID, { send_page_view: true });
+
+  const sendEvent = (name, params = {}) => {
+    window.gtag('event', name, params);
+  };
+
+  let estimateStarted = false;
+  let formStarted = false;
+
+  document.addEventListener('click', event => {
+    const el = event.target.closest('a,button');
+    if (!el) return;
+    const href = el.getAttribute('href') || '';
+
+    if (href.startsWith('tel:')) {
+      sendEvent('click_call_us', { link_url: href });
+      if (document.body.classList.contains('blog-article-page')) {
+        sendEvent('blog_call_click', { link_url: href });
+      }
+      return;
+    }
+
+    if (href.startsWith('mailto:')) {
+      sendEvent('click_email_us', { link_url: href });
+      return;
+    }
+
+    if (href.includes('google.com/maps')) {
+      sendEvent('click_service_area_map', { link_url: href });
+      return;
+    }
+
+    if (href.includes('g.page/r/CcpuRI50pRSLEAE/review')) {
+      sendEvent('google_review_click');
+      return;
+    }
+
+    if (/estimate\.html(?:[?#]|$)/i.test(href)) {
+      sendEvent('request_estimate_start', { link_url: href });
+      if (document.body.classList.contains('blog-article-page')) {
+        sendEvent('blog_estimate_start', { link_url: href });
+      }
+    }
+
+    if (/blog\/.*\.html(?:[?#]|$)/i.test(href)) {
+      sendEvent('blog_article_click', { article_url: href });
+    }
+  });
+
+  document.addEventListener('focusin', event => {
+    const form = event.target.closest('form');
+    if (!form || formStarted) return;
+    if (location.pathname.endsWith('/estimate.html') || location.pathname.endsWith('estimate.html')) {
+      formStarted = true;
+      sendEvent('form_start', { form_name: 'estimate_request' });
+    }
+  });
+
+  document.addEventListener('submit', event => {
+    const form = event.target;
+    if (!form) return;
+
+    if (location.pathname.endsWith('/estimate.html') || location.pathname.endsWith('estimate.html')) {
+      sendEvent('estimate_submit', { form_name: 'estimate_request', lead_type: 'onsite_estimate' });
+      // Standard GA4 lead-generation event. This represents a submitted lead
+      // request/attempt; final qualification should be handled separately.
+      sendEvent('generate_lead', { lead_type: 'onsite_estimate' });
+    }
+
+    if (form.id === 'reviewForm') {
+      sendEvent('review_submit');
+    }
+  });
+
+  document.addEventListener('play', event => {
+    if (event.target && event.target.tagName === 'VIDEO') {
+      sendEvent('video_play', {
+        video_title: event.target.closest('.work-video-card')?.querySelector('h3')?.textContent?.trim() || 'Our Work video'
+      });
+    }
+  }, true);
+
+  // Track estimate-page arrival separately from an estimate submission.
+  if (/estimate\.html$/i.test(location.pathname) && !estimateStarted) {
+    estimateStarted = true;
+    sendEvent('estimate_page_view', { page_type: 'onsite_estimate' });
+  }
+})();

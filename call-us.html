@@ -324,5 +324,30 @@ body{background:var(--b);color:var(--ink);font-family:Arial,sans-serif}
 <div class="fbuttons"><a href="call-us.html">☎ Call Us</a><a href="mailto:contact@1nnewayyrenovations.com">✉ Email Us</a><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&amp;query=1nnewayy+Renovations+Riverview+FL">✥ Service Area Map</a></div>
 <div class="legal"><span>© 1NNEWAYY RENOVATIONS LLC. All rights reserved.</span><span>Quality. Integrity. Results.</span></div>
 </footer>
+<script>
+(() => {
+  const MEASUREMENT_ID = 'G-KPD96277PQ';
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+  if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+    const ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(MEASUREMENT_ID);
+    document.head.appendChild(ga);
+  }
+  window.gtag('js', new Date());
+  window.gtag('config', MEASUREMENT_ID, { send_page_view: true });
+  const sendEvent = (name, params = {}) => window.gtag('event', name, params);
+  document.addEventListener('click', event => {
+    const el = event.target.closest('a,button');
+    if (!el) return;
+    const href = el.getAttribute('href') || '';
+    if (href.startsWith('tel:')) sendEvent('click_call_us', { link_url: href });
+    else if (href.startsWith('mailto:')) sendEvent('click_email_us', { link_url: href });
+    else if (href.includes('google.com/maps')) sendEvent('click_service_area_map', { link_url: href });
+    else if (/estimate\.html(?:[?#]|$)/i.test(href)) sendEvent('request_estimate_start', { link_url: href });
+  });
+})();
+</script>
 </body>
 </html>
