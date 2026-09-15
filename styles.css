@@ -451,3 +451,9 @@ body.centered-inner-page .call-page{ text-align:center }
   .blog-article-page .title{font-size:clamp(34px,9vw,48px) !important}
   .blog-article-page .lead{font-size:14px}
 }
+
+
+/* V5 REQUESTED REVISION — LOWER CONTENT ON SELECTED INNER PAGES */
+.v5-lower-content .page{padding-top:clamp(150px,18vh,210px)}
+.v5-lower-content .call-page{padding-top:clamp(150px,18vh,210px)}
+@media(max-width:700px){.v5-lower-content .page,.v5-lower-content .call-page{padding-top:110px}}
