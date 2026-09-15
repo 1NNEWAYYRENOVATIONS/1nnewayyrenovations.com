@@ -126,16 +126,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const stars = n => '★'.repeat(Math.max(0, Math.min(5, Number(n)))) + '☆'.repeat(Math.max(0, 5 - Number(n)));
   const escapeHtml = value => { const d = document.createElement('div'); d.textContent = value ?? ''; return d.innerHTML; };
 
+  /* Customer reviews supplied from Yelp/Thumbtack screenshots.
+     Display only the customer's name, five-star rating, and review text as requested. */
+  const importedCustomerReviews = [
+    { reviewer_name: 'Tammeaka H.', rating: 5, review_text: 'This company is superb from the owner to the employees. They set the expectations from the very beginning for themselves and the customer. They truly exceeded my expectations and were immensely patience. As the old saying goes you get what you pay for and this company was worth every hundred dollar bill. There is only one way.' },
+    { reviewer_name: 'Michelle S.', rating: 5, review_text: "I can't say enough about these guys!!! My apartment looks amazing and they were so nice! Definitely using them again!!!" },
+    { reviewer_name: 'Amber M.', rating: 5, review_text: 'Donte was great! Responded quickly and was able to come the very next day for my microwave range install requiring an outlet install. So polite and continually cleaned while he worked as not to leave me a mess. I will definitely use again. I am already making a list. lol' },
+    { reviewer_name: 'Amanda C.', rating: 5, review_text: '1nneway Renovations is an amazing company. They were very communicative and took the time to really understand our vision on our home project. They worked hard and were very timely! They went above and beyond to ensure our project was exactly what we expected. I would highly recommend them to anyone for their home projects. They are awesome!!!!' },
+    { reviewer_name: 'Natural M.', rating: 5, review_text: 'Excellent service! Knowledgeable and professional. Highly recommend them.' }
+  ];
+
+  const renderReviewCards = reviews => {
+    if (!liveReviews) return;
+    liveReviews.innerHTML = reviews.map(r =>
+      `<article class="card"><div aria-label="${Number(r.rating)} out of 5 stars">${stars(r.rating)}</div><h3>${escapeHtml(r.reviewer_name)}</h3><p>${escapeHtml(r.review_text)}</p></article>`
+    ).join('');
+  };
+
   async function loadApprovedReviews(){
-    if (!supabaseClient || !liveReviews) return;
+    if (!liveReviews) return;
+    if (!supabaseClient) {
+      renderReviewCards(importedCustomerReviews);
+      return;
+    }
     const { data, error } = await supabaseClient.from('reviews')
       .select('reviewer_name,rating,review_text,created_at')
       .eq('approved', true)
       .order('created_at', { ascending:false });
-    if (error) { console.error(error); return; }
-    liveReviews.innerHTML = (data || []).map(r =>
-      `<article class="card"><div aria-label="${Number(r.rating)} out of 5 stars">${stars(r.rating)}</div><h3>${escapeHtml(r.reviewer_name)}</h3><p>${escapeHtml(r.review_text)}</p></article>`
-    ).join('');
+    if (error) {
+      console.error(error);
+      renderReviewCards(importedCustomerReviews);
+      return;
+    }
+    renderReviewCards([...importedCustomerReviews, ...(data || [])]);
   }
 
   if (reviewForm) reviewForm.addEventListener('submit', async e => {
