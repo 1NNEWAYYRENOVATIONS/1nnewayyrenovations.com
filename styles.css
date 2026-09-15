@@ -255,3 +255,41 @@ body.centered-inner-page .call-page{ text-align:center }
 /* Preserve metallic-gold character for principal accent rules without changing structure. */
 .goldline:after,.call-line:after{background:var(--metal-gold-gradient)}
 
+
+
+/* V2 REQUESTED REVISION — FINAL COLOR / LAYOUT SURGICAL OVERRIDES */
+/* Call Us — four boxes remain individual and in one horizontal row; text is true white. */
+.call-actions .call-action,
+.call-actions .call-action strong,
+.call-actions .call-action span,
+.call-actions .call-action .icon{color:#FFFFFF !important}
+.call-actions .call-action{background:#000000 !important}
+
+/* Blog — category filter tabs intentionally removed from the page. */
+.blog .cats{display:none !important}
+
+/* Blog cards — true black field with white body text; category titles and Read Article remain gold. */
+.articles .article{background:#000000 !important;color:#FFFFFF !important;border-color:#3d3d3d;border-top-color:#D4AF37}
+.articles .article h2,.articles .article p{color:#FFFFFF !important}
+.articles .article .eyebrow{color:#D4AF37 !important}
+.articles .article a{color:#D4AF37 !important}
+
+/* Request Estimate — all user-entry fields are true black with white text. */
+.centered-inner-page .form input:not([type="hidden"]),
+.centered-inner-page .form select,
+.centered-inner-page .form textarea{
+  background:#000000 !important;
+  color:#FFFFFF !important;
+  border-color:#D4AF37 !important;
+  caret-color:#FFFFFF;
+}
+.centered-inner-page .form input::placeholder,
+.centered-inner-page .form textarea::placeholder{color:#FFFFFF !important;opacity:.9}
+.centered-inner-page .form select{color:#FFFFFF !important}
+.centered-inner-page .form select option{background:#000000;color:#FFFFFF}
+.centered-inner-page .form .btn{background:#D4AF37 !important;color:#000000 !important;border-color:#D4AF37 !important}
+.centered-inner-page .form .btn:hover{background:#F4E3A1 !important;color:#000000 !important;border-color:#F4E3A1 !important}
+
+/* F&Q — dropdown question tabs: true black background with white question text. */
+.faqitem summary{background:#000000 !important;color:#FFFFFF !important}
+.faqitem summary:after{color:#D4AF37 !important}
