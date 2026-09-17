@@ -70,12 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
       go(i, false);
     });
 
-    // No click interception is used for header navigation.
-    // Every header slide link performs a normal navigation to index.html?slide=N.
-    // This guarantees the requested slide is selected on the first click.
     window.addEventListener('popstate', () => go(requestedSlide(), false));
     window.addEventListener('hashchange', () => go(requestedSlide(), false));
-
     go(requestedSlide(), false);
   }
 
@@ -126,8 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const stars = n => '★'.repeat(Math.max(0, Math.min(5, Number(n)))) + '☆'.repeat(Math.max(0, 5 - Number(n)));
   const escapeHtml = value => { const d = document.createElement('div'); d.textContent = value ?? ''; return d.innerHTML; };
 
-  /* Customer reviews supplied from Yelp/Thumbtack screenshots.
-     Display only the customer's name, five-star rating, and review text as requested. */
   const importedCustomerReviews = [
     { reviewer_name: 'Tammeaka H.', rating: 5, review_text: 'This company is superb from the owner to the employees. They set the expectations from the very beginning for themselves and the customer. They truly exceeded my expectations and were immensely patience. As the old saying goes you get what you pay for and this company was worth every hundred dollar bill. There is only one way.' },
     { reviewer_name: 'Michelle S.', rating: 5, review_text: "I can't say enough about these guys!!! My apartment looks amazing and they were so nice! Definitely using them again!!!" },
@@ -204,8 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window[DATA_LAYER_NAME] = window[DATA_LAYER_NAME] || [];
   window.gtag = window.gtag || function(){ window[DATA_LAYER_NAME].push(arguments); };
 
-  // Load GA4 once. This keeps the tracking implementation centralized and
-  // prevents duplicate Google tags if another tag is already present.
   if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
     const ga = document.createElement('script');
     ga.async = true;
@@ -230,37 +222,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (href.startsWith('tel:')) {
       sendEvent('click_call_us', { link_url: href });
-      if (document.body.classList.contains('blog-article-page')) {
-        sendEvent('blog_call_click', { link_url: href });
-      }
+      if (document.body.classList.contains('blog-article-page')) sendEvent('blog_call_click', { link_url: href });
       return;
     }
-
     if (href.startsWith('mailto:')) {
       sendEvent('click_email_us', { link_url: href });
       return;
     }
-
     if (href.includes('google.com/maps')) {
       sendEvent('click_service_area_map', { link_url: href });
       return;
     }
-
     if (href.includes('g.page/r/CcpuRI50pRSLEAE/review')) {
       sendEvent('google_review_click');
       return;
     }
-
     if (/estimate\.html(?:[?#]|$)/i.test(href)) {
       sendEvent('request_estimate_start', { link_url: href });
-      if (document.body.classList.contains('blog-article-page')) {
-        sendEvent('blog_estimate_start', { link_url: href });
-      }
+      if (document.body.classList.contains('blog-article-page')) sendEvent('blog_estimate_start', { link_url: href });
     }
+    if (/blog\/.*\.html(?:[?#]|$)/i.test(href)) sendEvent('blog_article_click', { article_url: href });
+  });
 
-    if (/blog\/.*\.html(?:[?#]|$)/i.test(href)) {
-      sendEvent('blog_article_click', { article_url: href });
-    }
+  /* FAQ engagement: record only the opening of a question, not every close. */
+  document.querySelectorAll('.faqitem').forEach((item, index) => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return;
+      const summary = item.querySelector('summary');
+      const question = summary ? summary.textContent.replace(/\s+/g, ' ').trim() : `FAQ ${index + 1}`;
+      sendEvent('faq_question_open', {
+        faq_question: question,
+        faq_index: index + 1,
+        page: 'faq'
+      });
+    });
   });
 
   document.addEventListener('focusin', event => {
@@ -275,17 +270,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('submit', event => {
     const form = event.target;
     if (!form) return;
-
     if (location.pathname.endsWith('/estimate.html') || location.pathname.endsWith('estimate.html')) {
       sendEvent('estimate_submit', { form_name: 'estimate_request', lead_type: 'onsite_estimate' });
-      // Standard GA4 lead-generation event. This represents a submitted lead
-      // request/attempt; final qualification should be handled separately.
       sendEvent('generate_lead', { lead_type: 'onsite_estimate' });
     }
-
-    if (form.id === 'reviewForm') {
-      sendEvent('review_submit');
-    }
+    if (form.id === 'reviewForm') sendEvent('review_submit');
   });
 
   document.addEventListener('play', event => {
@@ -296,7 +285,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, true);
 
-  // Track estimate-page arrival separately from an estimate submission.
   if (/estimate\.html$/i.test(location.pathname) && !estimateStarted) {
     estimateStarted = true;
     sendEvent('estimate_page_view', { page_type: 'onsite_estimate' });
