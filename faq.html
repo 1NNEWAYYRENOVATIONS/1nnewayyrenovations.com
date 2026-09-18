@@ -32,8 +32,8 @@
 </div>
 <style>
 .faq-search-wrap{max-width:920px;margin:0 auto 24px;text-align:left}
-..faq-search-label{display:block;margin:0 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#555}
-..faq-search{display:block;width:100%;padding:14px 17px;border:1px solid #999;border-radius:7px;background:#fff;color:#171819;font:15px Arial,sans-serif;outline:none;box-shadow:0 3px 10px #0000000d;transition:border-color .2s ease,box-shadow .2s ease}
+.faq-search-label{display:block;margin:0 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#555}
+.faq-search{display:block;width:100%;padding:14px 17px;border:1px solid #999;border-radius:7px;background:#fff;color:#171819;font:15px Arial,sans-serif;outline:none;box-shadow:0 3px 10px #0000000d;transition:border-color .2s ease,box-shadow .2s ease}
 .faq-search::placeholder{color:#888}
 .faq-search:focus{border-color:#d6a51f;box-shadow:0 0 0 3px #d6a51f22}
 .faq-no-results{padding:14px 2px 0;color:#666;font-size:14px}
@@ -45,7 +45,7 @@
 .faqitem summary:after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-family:Arial,sans-serif;font-size:25px;font-weight:300;color:#d4af37}
 .faqitem[open] summary:after{content:'−'}
 .faqanswer{padding:0 22px 22px;color:rgba(255,255,255,.82);font-size:15px;line-height:1.7;border-top:1px solid rgba(212,175,55,.18);padding-top:17px}
-@media(max-width:700px){.faq-search-wrap{max-width:920px;margin:0 auto 18px;text-align:center}..faq-search{display:block;width:100%;box-sizing:border-box;margin:0 auto;padding:13px 14px;font-size:14px;text-align:center}.faq{margin-top:22px;gap:10px}.faqitem summary{padding:17px 46px 17px 16px;font-size:16px}.faqanswer{padding:14px 16px 18px;font-size:14px}}
-..faq-search-label{text-align:center;display:block;margin:0 0 8px;}</style></div></main><footer class="footer"><img class="flogo" src="logo.png" alt="1NNEWAYY RENOVATIONS LLC"><div class="tag">There’s only one way… and that’s the right way.</div><div class="touch"><span>GET IN TOUCH</span></div><div class="fbuttons"><a href="tel:+18889138677">☎ Call Us</a><a href="mailto:contact@1nnewayyrenovations.com">✉ Email Us</a><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=1nnewayy+Renovations+Riverview+FL">✥ Service Area Map</a></div><div class="legal"><span>© 1NNEWAYY RENOVATIONS LLC. All rights reserved.</span><span>Quality. Integrity. Results.</span></div></footer><script src="script.js"></script><script>
+@media(max-width:700px){.faq-search-wrap{margin-bottom:18px}.faq-search{padding:13px 14px;font-size:14px}.faq{margin-top:22px;gap:10px}.faqitem summary{padding:17px 46px 17px 16px;font-size:16px}.faqanswer{padding:14px 16px 18px;font-size:14px}}
+.faq-search-label{text-align:center;display:block;margin:0 0 8px;}</style></div></main><footer class="footer"><img class="flogo" src="logo.png" alt="1NNEWAYY RENOVATIONS LLC"><div class="tag">There’s only one way… and that’s the right way.</div><div class="touch"><span>GET IN TOUCH</span></div><div class="fbuttons"><a href="tel:+18889138677">☎ Call Us</a><a href="mailto:contact@1nnewayyrenovations.com">✉ Email Us</a><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=1nnewayy+Renovations+Riverview+FL">✥ Service Area Map</a></div><div class="legal"><span>© 1NNEWAYY RENOVATIONS LLC. All rights reserved.</span><span>Quality. Integrity. Results.</span></div></footer><script src="script.js"></script><script>
 (function(){var input=document.getElementById('faqSearch'),items=[].slice.call(document.querySelectorAll('.faqitem')),empty=document.getElementById('faqNoResults');if(!input)return;input.addEventListener('input',function(){var q=input.value.trim().toLowerCase(),shown=0;items.forEach(function(item){var match=!q||item.textContent.toLowerCase().indexOf(q)!==-1;item.style.display=match?'':'none';if(match)shown++;});empty.hidden=shown!==0;});})();
 </script></body></html>
