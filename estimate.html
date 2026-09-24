@@ -10,4 +10,63 @@
 <a href="call-us.html">Call Us</a>
 <a href="blog.html">Blog</a>
 <a href="faq.html">F&Q</a>
-</nav></header><main class="page"><div class="inner"><div class="eyebrow">REQUEST YOUR</div><h1 class="title">Onsite Estimate</h1><div class="goldline"></div><p class="lead">Tell us what you need and we’ll help you take the next step.</p><form class="form" action="https://formsubmit.co/contact@1nnewayyrenovations.com" method="POST"><input type="hidden" name="_subject" value="New Onsite Estimate Request — 1NNEWAYY RENOVATIONS"><input type="hidden" name="_next" value="https://www.1nnewayyrenovations.com/thank-you.html"><input type="hidden" name="_captcha" value="false"><input name="name" placeholder="Your name" required><input name="phone" placeholder="Phone number" required><input name="email" type="email" placeholder="Email address" required><select name="service" required><option value="">Service needed</option><option>Flooring</option><option>Kitchen Renovation</option><option>Bathroom Renovation</option><option>Drywall</option><option>Painting</option><option>Electrical</option><option>Plumbing</option><option>General Renovation</option><option>Other</option></select><textarea name="message" placeholder="Tell us about your project" required></textarea><button class="btn dark" type="submit">Request Onsite Estimate</button></form></div></main><footer class="footer"><img class="flogo" src="logo.png" alt="1NNEWAYY RENOVATIONS LLC"><div class="tag">There’s only one way… and that’s the right way.</div><div class="touch"><span>GET IN TOUCH</span></div><div class="fbuttons"><a href="tel:+18889138677">☎ Call Us</a><a href="mailto:contact@1nnewayyrenovations.com">✉ Email Us</a><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=1nnewayy+Renovations+Riverview+FL">✥ Service Area Map</a></div><div class="legal"><span>© 1NNEWAYY RENOVATIONS LLC. All rights reserved.</span><span>Quality. Integrity. Results.</span></div></footer><script src="script.js"></script></body></html>
+</nav></header><main class="page"><div class="inner"><div class="eyebrow">REQUEST YOUR</div><h1 class="title">Onsite Estimate</h1><div class="goldline"></div><p class="lead">Tell us what you need and we’ll help you take the next step.</p><form class="form" action="https://formsubmit.co/contact@1nnewayyrenovations.com" method="POST"><input type="hidden" name="_subject" value="New Onsite Estimate Request — 1NNEWAYY RENOVATIONS"><input type="hidden" name="_next" value="https://www.1nnewayyrenovations.com/thank-you.html"><input type="hidden" name="_captcha" value="false"><input name="name" placeholder="Your name" required><input name="phone" placeholder="Phone number" required><input name="email" type="email" placeholder="Email address" required><select name="service" required><option value="">Service needed</option><option>Flooring</option><option>Kitchen Renovation</option><option>Bathroom Renovation</option><option>Drywall</option><option>Painting</option><option>Electrical</option><option>Plumbing</option><option>General Renovation</option><option>Other</option></select><textarea name="message" placeholder="Tell us about your project" required></textarea><button class="btn dark" type="submit">Request Onsite Estimate</button></form></div></main><footer class="footer"><img class="flogo" src="logo.png" alt="1NNEWAYY RENOVATIONS LLC"><div class="tag">There’s only one way… and that’s the right way.</div><div class="touch"><span>GET IN TOUCH</span></div><div class="fbuttons"><a href="tel:+18889138677">☎ Call Us</a><a href="mailto:contact@1nnewayyrenovations.com">✉ Email Us</a><a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=1nnewayy+Renovations+Riverview+FL">✥ Service Area Map</a></div><div class="legal"><span>© 1NNEWAYY RENOVATIONS LLC. All rights reserved.</span><span>Quality. Integrity. Results.</span></div></footer><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+<script>
+(() => {
+  const form = document.querySelector('form.form');
+  if (!form || !window.supabase) return;
+
+  const SUPABASE_URL = 'https://vhwydkhqnwcatjgvivdp.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_8dkgxiff3N966UjAyBSORw_qc6t1F3X';
+  const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+  let savedToSupabase = false;
+
+  form.addEventListener('submit', async (event) => {
+    if (savedToSupabase) return;
+
+    event.preventDefault();
+
+    const button = form.querySelector('button[type="submit"]');
+    const originalText = button ? button.textContent : '';
+    if (button) {
+      button.disabled = true;
+      button.textContent = 'Submitting…';
+    }
+
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get('name') || '').trim(),
+      phone: String(fd.get('phone') || '').trim(),
+      email: String(fd.get('email') || '').trim(),
+      service: String(fd.get('service') || '').trim(),
+      message: String(fd.get('message') || '').trim(),
+      status: 'new',
+      source: 'website'
+    };
+
+    const { error } = await client.from('estimate_requests').insert(payload);
+
+    if (error) {
+      console.error('Supabase estimate submission failed:', error);
+      if (button) {
+        button.disabled = false;
+        button.textContent = originalText;
+      }
+      let status = form.querySelector('.estimate-submit-status');
+      if (!status) {
+        status = document.createElement('div');
+        status.className = 'estimate-submit-status';
+        status.setAttribute('role', 'alert');
+        form.appendChild(status);
+      }
+      status.textContent = 'We could not submit your request right now. Please try again.';
+      return;
+    }
+
+    savedToSupabase = true;
+    form.requestSubmit();
+  });
+})();
+</script></body></html>
