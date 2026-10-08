@@ -699,3 +699,63 @@ body{font-size:14px}
  .gallery-grid img{height:180px}.approved-home-copy h1{font-size:38px}
  .approved-home-tagline{font-size:13px}.approved-home-description{font-size:13px}
 }
+
+/* FINAL COMPACT FOOTER — reduce excess vertical space site-wide */
+.site-footer.mockup-footer{
+  min-height:0 !important;
+  padding:20px 30px 10px !important;
+}
+.site-footer.mockup-footer .mockup-footer-main{
+  min-height:185px !important;
+  gap:28px !important;
+}
+.site-footer.mockup-footer .mockup-footer-logo{
+  width:220px !important;
+}
+.site-footer.mockup-footer .mockup-footer-divider{
+  height:66px !important;
+}
+.site-footer.mockup-footer .mockup-footer-estimate{
+  min-height:50px !important;
+  padding:10px 22px !important;
+  font-size:16px !important;
+}
+.site-footer.mockup-footer .mockup-footer-call{
+  font-size:21px !important;
+  gap:12px !important;
+}
+.site-footer.mockup-footer .mockup-footer-phone{
+  width:48px !important;
+  height:48px !important;
+  font-size:24px !important;
+}
+.site-footer.mockup-footer .mockup-footer-copyright{
+  margin-top:6px !important;
+  font-size:11px !important;
+}
+@media(max-width:760px){
+  .site-footer.mockup-footer{
+    padding:18px 16px 9px !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-main{
+    gap:11px !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-logo{
+    width:190px !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-divider{
+    height:1px !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-estimate{
+    min-height:46px !important;
+    font-size:15px !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-call{
+    font-size:19px !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-phone{
+    width:44px !important;
+    height:44px !important;
+    font-size:22px !important;
+  }
+}
