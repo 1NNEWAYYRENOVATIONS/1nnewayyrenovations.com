@@ -498,3 +498,26 @@ h1,h2,h3,p,a,button,summary{overflow-wrap:anywhere}
  .approved-icon{font-size:34px}
  .approved-home-feature strong{font-size:13px}
 }
+
+/* APPROVED MOCKUP IMAGE ASSETS — final responsive image wiring */
+.company-hero{--hero:url('company-interior.jpg')}
+.areas-hero{--hero:url('service-areas-palms.jpg')}
+.services-hero{--hero:url('services-interior.jpg')}
+.work-hero{--hero:url('ourwork-interior.jpg')}
+.master-hero{--hero:url('masterplan-interior.jpg')}
+.reviews-hero{--hero:url('work-kitchen.jpg')}
+.estimate-hero{--hero:url('home-hero.jpg')}
+.blog-hero{--hero:url('blog-hero.jpg')}
+.faq-hero{--hero:url('work-bathroom.jpg')}
+.call-hero{--hero:url('work-interior.jpg')}
+.approved-site-footer{background:#050505;border-top:1px solid #d4af37;padding:34px 28px 16px;color:#fff}
+.approved-site-footer-brand{text-align:center}
+.approved-site-footer-brand .footer-logo{display:block;width:230px;height:auto;margin:0 auto 8px}
+.approved-site-footer-brand p{margin:0;color:#f1bd21;font:600 15px/1.4 Georgia,"Times New Roman",serif;letter-spacing:.03em}
+.approved-site-footer-contact{max-width:1100px;margin:26px auto 0;text-align:center}
+.footer-contact-title{font-size:13px;letter-spacing:.28em;color:#f1bd21;margin-bottom:15px}
+.footer-contact-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.footer-contact-actions a{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px 14px;border:1px solid #d4af37;border-radius:12px;background:#0a0a0a;color:#fff;text-decoration:none;font-weight:700}
+.footer-contact-actions a:hover{background:#d4af37;color:#000}
+.approved-site-footer-bottom{max-width:1100px;margin:24px auto 0;padding-top:13px;border-top:1px solid #33280b;display:flex;justify-content:space-between;gap:20px;color:#aaa;font-size:12px}
+@media(max-width:700px){.approved-site-footer{padding:28px 16px 14px}.approved-site-footer-brand .footer-logo{width:195px}.footer-contact-actions{grid-template-columns:1fr}.approved-site-footer-bottom{flex-direction:column;text-align:center;align-items:center;gap:6px}}
