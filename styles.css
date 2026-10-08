@@ -452,3 +452,49 @@ input,select,textarea{font-size:16px}
 /* Prevent horizontal overflow from long controls/content */
 .nav,.section,.page-hero-inner,.footer-main,.footer-bottom{min-width:0}
 h1,h2,h3,p,a,button,summary{overflow-wrap:anywhere}
+
+/* HOME FINAL COMPACT CONTENT SCALE */
+@media(min-width:1201px){
+ .approved-home-hero{min-height:760px;background-position:center center}
+ .approved-home-copy{padding:0 54px 48px}
+ .approved-home-eyebrow{font-size:24px;margin-bottom:12px}
+ .approved-home-copy h1{font-size:clamp(62px,6.2vw,94px)}
+ .approved-home-copy h1 strong{margin-top:12px}
+ .approved-home-rule{height:4px;width:82px;margin:15px 0 11px}
+ .approved-home-tagline{font-size:21px;margin-bottom:18px}
+ .approved-home-description{max-width:650px;font-size:18px;line-height:1.45}
+ .approved-home-features{min-height:118px}
+ .approved-home-feature{padding:18px 14px;gap:14px}
+ .approved-icon{font-size:40px}
+ .approved-home-feature strong{font-size:16px}
+ .approved-home-footer{padding-top:24px;padding-bottom:14px}
+ .approved-footer-logo{width:205px}
+ .approved-footer-estimate{min-width:350px;padding:18px 24px;font-size:17px}
+ .approved-footer-call{font-size:21px}
+ .approved-footer-bottom{margin-top:15px;font-size:13px}
+}
+@media(min-width:801px) and (max-width:1200px){
+ .approved-home-hero{min-height:690px}
+ .approved-home-copy{padding:0 40px 40px}
+ .approved-home-copy h1{font-size:76px}
+ .approved-home-description{font-size:18px}
+}
+@media(max-width:800px){
+ .approved-home-hero{min-height:650px}
+ .approved-home-copy{padding-bottom:32px}
+ .approved-home-copy h1{font-size:clamp(42px,10vw,64px)}
+ .approved-home-tagline{font-size:18px;margin-bottom:14px}
+ .approved-home-description{font-size:16px;line-height:1.45}
+ .approved-home-feature strong{font-size:14px}
+}
+@media(max-width:520px){
+ .approved-home-hero{min-height:590px}
+ .approved-home-copy{padding:0 15px 25px}
+ .approved-home-eyebrow{font-size:13px}
+ .approved-home-copy h1{font-size:42px}
+ .approved-home-tagline{font-size:14px}
+ .approved-home-description{font-size:14px}
+ .approved-home-feature{min-height:92px;padding:15px}
+ .approved-icon{font-size:34px}
+ .approved-home-feature strong{font-size:13px}
+}
