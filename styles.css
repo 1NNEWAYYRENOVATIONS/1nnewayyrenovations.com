@@ -521,3 +521,15 @@ h1,h2,h3,p,a,button,summary{overflow-wrap:anywhere}
 .footer-contact-actions a:hover{background:#d4af37;color:#000}
 .approved-site-footer-bottom{max-width:1100px;margin:24px auto 0;padding-top:13px;border-top:1px solid #33280b;display:flex;justify-content:space-between;gap:20px;color:#aaa;font-size:12px}
 @media(max-width:700px){.approved-site-footer{padding:28px 16px 14px}.approved-site-footer-brand .footer-logo{width:195px}.footer-contact-actions{grid-template-columns:1fr}.approved-site-footer-bottom{flex-direction:column;text-align:center;align-items:center;gap:6px}}
+
+/* EXACT APPROVED HOME MOCKUP FOOTER — shared site-wide */
+.mockup-footer{position:relative;background:#050505;color:#fff;border-top:2px solid #d4af37;padding:24px 30px 14px;overflow:hidden}
+.mockup-footer-main{position:relative;z-index:1;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 2px 1.55fr 2px 1fr;align-items:center;gap:28px;min-height:126px}
+.mockup-footer-brand{text-align:left}.mockup-footer-logo{display:block;width:min(250px,100%);height:auto;object-fit:contain}
+.mockup-footer-divider{width:2px;height:82px;background:#d4af37;justify-self:center}
+.mockup-footer-action{display:flex;align-items:center;justify-content:center}
+.mockup-footer-estimate{display:flex;align-items:center;justify-content:center;min-height:56px;width:min(330px,100%);padding:12px 24px;box-sizing:border-box;border-radius:14px;background:linear-gradient(135deg,#ffe083,#f2b91d);color:#050505;text-decoration:none;font-size:18px;font-weight:800}
+.mockup-footer-call{display:flex;align-items:center;justify-content:center;gap:15px;color:#f4bf1b;text-decoration:none;font-size:22px;font-weight:800;white-space:nowrap}
+.mockup-footer-phone{width:54px;height:54px;border:2px solid #f4bf1b;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:27px;line-height:1}
+.mockup-footer-copyright{position:relative;z-index:1;margin:10px auto 0;text-align:center;color:#fff;font-size:13px;line-height:1.5}
+@media(max-width:760px){.mockup-footer{padding:24px 16px 14px}.mockup-footer-main{grid-template-columns:1fr;gap:16px;min-height:0}.mockup-footer-brand{text-align:center}.mockup-footer-logo{width:min(220px,80vw);margin:0 auto}.mockup-footer-divider{width:70%;height:1px;justify-self:center}.mockup-footer-estimate{width:min(360px,90vw);font-size:16px}.mockup-footer-call{font-size:20px}.mockup-footer-copyright{font-size:11px}}
