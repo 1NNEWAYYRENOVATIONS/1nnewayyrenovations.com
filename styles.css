@@ -319,3 +319,136 @@ url('slides/slide-11.jpg') center/cover;border-top:0;padding:32px 35px 18px}
  .approved-home-feature{border-right:0}
  .approved-footer-logo{width:210px}
 }
+
+
+/* FINAL RESPONSIVE STANDARD — 1440 DESKTOP / TABLET / MOBILE */
+:root{--site-max:1440px;--content-max:1320px}
+body{min-width:0;overflow-x:hidden}
+.site-header{width:100%}
+.header-inner{width:min(100%,1440px);max-width:1440px}
+.page-shell{width:100%;max-width:1440px;margin:0 auto}
+.page-hero-inner,.section,.footer-main,.footer-bottom{max-width:1320px}
+.page-hero-inner{padding-left:40px;padding-right:40px}
+.section{padding-left:32px;padding-right:32px}
+.site-footer{width:100%}
+.media-hero{min-height:620px}
+.hero-title{max-width:1050px}
+.lux-card,.service-card,.work-video-card,.testimonial,.blog-card,.faqitem,.project-form,.call-panel{min-width:0}
+img,video,iframe{max-width:100%}
+button,.btn-gold,.btn-outline,.header-call{touch-action:manipulation}
+input,select,textarea{font-size:16px}
+
+/* 1440px desktop composition */
+@media(min-width:1201px){
+ .header-inner{min-height:96px;padding-left:28px;padding-right:28px}
+ .brand img{width:210px;height:76px}
+ .nav{gap:5px}
+ .nav a{font-size:12px;padding:10px 9px}
+ .header-call{min-width:145px}
+ .page-hero{min-height:620px}
+ .page-hero-inner{padding-top:90px;padding-bottom:90px}
+ .section{padding-top:64px;padding-bottom:64px}
+ .site-footer{padding-left:40px;padding-right:40px}
+}
+
+/* Tablet */
+@media(max-width:1200px){
+ .header-inner{grid-template-columns:180px minmax(0,1fr) 120px;gap:8px;padding:8px 14px}
+ .brand img{width:170px;height:66px}
+ .nav{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none}
+ .nav::-webkit-scrollbar{display:none}
+ .nav a{font-size:11px;padding:9px 7px}
+ .page-hero-inner{padding:70px 30px}
+ .section{padding:50px 24px}
+ .footer-main,.footer-bottom{max-width:1200px}
+ .video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .blog-grid,.cards-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Mobile navigation/header */
+@media(max-width:800px){
+ .site-header{position:sticky}
+ .header-inner{display:grid;grid-template-columns:110px minmax(0,1fr) 48px;min-height:82px;padding:7px 10px;gap:7px}
+ .brand img{width:108px;height:58px}
+ .nav{gap:2px;justify-content:flex-start}
+ .nav a{font-size:10px;padding:8px 7px}
+ .header-call{width:44px;height:44px;padding:0;border-radius:50%;font-size:20px;justify-content:center}
+ .header-call span{display:none}
+ .page-hero{min-height:500px}
+ .page-hero-inner{padding:58px 20px}
+ .hero-title{font-size:clamp(42px,11vw,66px)}
+ .hero-lead{font-size:16px;line-height:1.55}
+ .section{padding:42px 18px}
+ .section-title{font-size:29px}
+ .grid-2,.grid-3,.grid-4,.area-panel,.master-video,.review-panels,.estimate-grid,.call-grid{grid-template-columns:1fr}
+ .feature-strip{grid-template-columns:1fr}
+ .feature{border-right:0;border-bottom:1px solid var(--line)}
+ .feature:last-child{border-bottom:0}
+ .video-grid,.gallery-grid,.blog-grid,.cards-list{grid-template-columns:1fr}
+ .service-card .service-image{height:190px}
+ .service-card p{min-height:0}
+ .expect-grid,.why-grid{grid-template-columns:1fr}
+ .project-form{padding:18px}
+ .project-form .form-grid{grid-template-columns:1fr}
+ .project-form textarea,.project-form .full{grid-column:auto}
+ .service-choice{grid-template-columns:1fr}
+ .footer-main{grid-template-columns:1fr;gap:18px;text-align:center}
+ .footer-logo{margin:auto}
+ .footer-cta,.footer-call{justify-self:center}
+ .footer-bottom{display:flex;flex-direction:column;align-items:center;text-align:center;gap:7px}
+ .approved-home-header .header-inner{display:grid;grid-template-columns:110px minmax(0,1fr) 48px}
+ .approved-home-header .brand img{width:108px;height:62px}
+ .approved-home-header .nav a{font-size:10px;padding:8px 6px}
+ .approved-home-header .header-call{min-width:44px}
+ .approved-home-hero{min-height:760px}
+ .approved-home-copy{padding:0 22px 42px}
+ .approved-home-copy h1{font-size:clamp(48px,11vw,72px)}
+ .approved-home-description{font-size:17px;max-width:650px}
+ .approved-home-actions{display:none}
+ .approved-home-features{grid-template-columns:repeat(2,1fr)}
+ .approved-home-feature{min-height:125px;border-right:1px solid #d4af37}
+ .approved-home-feature:nth-child(2n){border-right:0}
+ .approved-home-feature strong{font-size:16px}
+ .approved-footer-main{grid-template-columns:1fr}
+ .approved-footer-logo,.approved-footer-estimate,.approved-footer-call{justify-self:center}
+ .approved-footer-estimate{min-width:0;width:min(430px,100%)}
+}
+
+/* Small phones */
+@media(max-width:520px){
+ .header-inner,.approved-home-header .header-inner{grid-template-columns:92px minmax(0,1fr) 42px;min-height:72px;padding:5px 7px}
+ .brand img,.approved-home-header .brand img{width:90px;height:54px}
+ .nav a,.approved-home-header .nav a{font-size:9px;padding:7px 6px}
+ .header-call{width:40px;height:40px;font-size:18px}
+ .page-hero{min-height:430px}
+ .page-hero-inner{padding:50px 16px}
+ .eyebrow{font-size:10px;letter-spacing:.24em}
+ .hero-title{font-size:43px;line-height:.95}
+ .hero-lead{font-size:15px}
+ .section{padding:34px 14px}
+ .lux-card{padding:17px}
+ .btn-gold,.btn-outline{width:100%;min-height:48px}
+ .category-tabs{gap:6px}
+ .category-tabs button{font-size:10px;padding:8px 10px}
+ .blog-card h3{font-size:18px}
+ .approved-home-hero{min-height:700px}
+ .approved-home-copy{padding:0 16px 30px}
+ .approved-home-eyebrow{font-size:15px;letter-spacing:.2em}
+ .approved-home-copy h1{font-size:47px}
+ .approved-home-copy h1 strong{font-size:.57em;margin-top:12px}
+ .approved-home-tagline{font-size:15px}
+ .approved-home-description{font-size:15px;line-height:1.48}
+ .approved-home-features{grid-template-columns:1fr}
+ .approved-home-feature{border-right:0!important;border-bottom:1px solid #d4af37;min-height:104px}
+ .approved-home-feature:last-child{border-bottom:0}
+ .approved-home-feature strong{font-size:15px}
+ .approved-footer-main{gap:15px}
+ .approved-footer-logo{width:190px}
+ .approved-footer-estimate{font-size:17px;padding:18px 20px}
+ .approved-footer-call{font-size:20px}
+}
+
+/* Prevent horizontal overflow from long controls/content */
+.nav,.section,.page-hero-inner,.footer-main,.footer-bottom{min-width:0}
+h1,h2,h3,p,a,button,summary{overflow-wrap:anywhere}
