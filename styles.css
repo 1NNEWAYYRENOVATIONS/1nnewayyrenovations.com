@@ -908,3 +908,38 @@ body{font-size:14px}
 .service-areas-value-grid p{font-size:14px;line-height:1.45;margin:5px 0 0;color:#f3f3f3}
 @media(max-width:720px){.service-areas-mockup-hero{min-height:420px;background-position:58% center}.service-areas-hero-copy{padding:35px 20px}.service-areas-eyebrow{font-size:14px}.service-areas-hero-copy h1{font-size:clamp(39px,10vw,58px)}.service-areas-primary-panel{grid-template-columns:1fr}.service-areas-primary{border-right:0;border-bottom:2px solid #d7b400;padding:22px 18px}.service-areas-surrounding{padding:22px 18px}.service-areas-map{width:37%;opacity:.38}.service-areas-value-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}.service-areas-value-grid article{padding:0 10px}.service-areas-value-grid article:nth-child(2){border-right:0}.service-areas-value-grid article:nth-child(3),.service-areas-value-grid article:nth-child(4){border-top:1px solid #8b7200;padding-top:15px}.service-areas-values>h2{font-size:15px;letter-spacing:.22em}.service-areas-content{padding:0 14px 28px}}
 @media(max-width:420px){.service-areas-primary{gap:14px}.service-areas-kicker{font-size:12px;letter-spacing:.2em}.service-areas-primary h2{font-size:17px}.service-areas-value-grid p{font-size:12px}}
+
+
+/* Service Areas lower-page treatment matched to the approved reference */
+.service-areas-content{padding:0 4.5% 36px}
+.service-areas-primary-panel{grid-template-columns:1fr 1.1fr;min-height:194px;border-radius:7px}
+.service-areas-primary{gap:23px;padding:22px 20px}
+.service-areas-pin{width:58px;height:74px;display:grid;place-items:center;position:relative;flex-shrink:0;font-size:0;background:linear-gradient(145deg,#ffe58b,#ffb82e 58%,#d6810a);clip-path:polygon(50% 100%,10% 48%,0 30%,4% 15%,18% 3%,35% 0,50% 6%,65% 0,82% 3%,96% 15%,100% 30%,90% 48%)}
+.service-areas-pin span{display:grid;place-items:center;width:27px;height:27px;border:7px solid #17120a;border-radius:50%;color:transparent;background:#111;box-shadow:0 0 0 4px #d99720}
+.service-areas-primary h2{font-size:18px;white-space:nowrap}
+.service-areas-surrounding{padding:21px 19px;min-height:190px}
+.service-areas-kicker{font-size:12px;letter-spacing:.28em}
+.service-areas-counties{gap:6px;margin-top:12px}
+.service-areas-counties div{font-size:14px;gap:10px}
+.service-areas-map{right:3%;top:9%;width:42%;height:87%;background:none;mask-image:none;opacity:1}
+.service-areas-map .map-panhandle{position:absolute;left:8%;top:4%;width:45%;height:23%;border:1px solid #d9a400;border-radius:6px 3px 0 2px;background:repeating-linear-gradient(0deg,transparent 0 12px,#4b3c16 13px 14px),repeating-linear-gradient(90deg,transparent 0 13px,#4b3c16 14px 15px);transform:skew(-8deg)}
+.service-areas-map .map-mainland{position:absolute;left:20%;top:20%;width:72%;height:74%;background:repeating-linear-gradient(0deg,transparent 0 12px,#4a3a14 13px 14px),repeating-linear-gradient(90deg,transparent 0 12px,#4a3a14 13px 14px);border:1px solid #e3ad00;clip-path:polygon(0 0,76% 0,81% 14%,89% 24%,100% 46%,88% 60%,80% 72%,68% 85%,55% 100%,43% 88%,35% 68%,25% 53%,18% 34%,5% 22%)}
+.service-areas-map .map-highlight{position:absolute;left:26%;top:31%;width:31%;height:43%;background:linear-gradient(135deg,#ffe57c,#dba21b);opacity:.88;clip-path:polygon(18% 0,75% 4%,100% 32%,81% 54%,71% 100%,38% 84%,27% 60%,0 42%)}
+.service-areas-values{margin-top:8px;padding:10px 16px 9px}
+.service-areas-values>h2{font-size:16px;letter-spacing:.32em;margin-bottom:12px}
+.service-areas-value-grid article{min-height:162px;padding:0 11px}
+.service-value-icon{font-size:39px;min-height:48px;display:flex;align-items:center;justify-content:center;color:#ffc34c}
+.service-value-icon.shield-icon{width:43px;height:45px;border:4px solid #efb33e;clip-path:polygon(50% 0,95% 20%,88% 67%,50% 100%,12% 67%,5% 20%);font-size:25px;font-weight:800}
+.service-value-icon.award-icon{font-size:42px;text-shadow:0 0 1px #ffdb79}
+.service-value-icon.handshake-icon{font-size:42px}
+.service-value-icon.people-icon{font-size:42px}
+.service-areas-value-grid h3{font-size:14px;margin-top:4px}
+.service-areas-value-grid .service-areas-rule{width:44px;height:3px;margin:8px auto}
+.service-areas-value-grid p{font-size:13px;line-height:1.35;margin-top:4px}
+.service-areas-feature-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;padding:13px 4.5%;background:#030303;border-top:1px solid #d8b400;border-bottom:1px solid #d8b400;color:#fff}
+.service-areas-feature{display:flex;align-items:center;gap:14px;padding:0 18px;border-right:1px solid #d8b400;min-height:62px}
+.service-areas-feature:last-child{border-right:0}
+.service-areas-feature-icon{font-size:38px;line-height:1;color:#f8c34b;text-shadow:0 0 9px #8b5c10;min-width:42px;text-align:center}
+.service-areas-feature strong{display:block;font-size:12px;color:#fff;font-weight:600}
+.service-areas-feature p{font-size:11px;line-height:1.35;color:#eee;margin:4px 0 0}
+@media(max-width:720px){.service-areas-content{padding:0 14px 25px}.service-areas-primary-panel{grid-template-columns:1fr}.service-areas-primary{border-right:0;border-bottom:2px solid #d7b400;padding:20px 15px}.service-areas-primary h2{font-size:16px;white-space:normal}.service-areas-surrounding{padding:20px 15px}.service-areas-map{width:38%;opacity:.75}.service-areas-values{padding:12px 9px}.service-areas-values>h2{font-size:14px}.service-areas-value-grid article{min-height:155px}.service-areas-value-grid p{font-size:12px}.service-areas-feature-strip{grid-template-columns:1fr;padding:0 18px}.service-areas-feature{padding:12px 4px;border-right:0;border-bottom:1px solid #705900}.service-areas-feature:last-child{border-bottom:0}.service-areas-feature-icon{font-size:32px}.service-areas-feature p{font-size:12px}}
