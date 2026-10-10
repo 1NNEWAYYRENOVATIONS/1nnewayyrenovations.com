@@ -1433,3 +1433,31 @@ body{font-size:14px}
   -webkit-text-fill-color:transparent;
   text-shadow:none;
 }
+
+
+/* Match requested page hero headline sizing to the approved Our Work page */
+.page-hero.reviews-hero .hero-title,
+.page-hero.estimate-hero .hero-title,
+.page-hero.blog-hero .hero-title,
+.page-hero.faq-hero .hero-title,
+.page-hero.call-hero .hero-title{
+  font-size:clamp(52px,6vw,76px);
+  line-height:.98;
+}
+.service-areas-mockup-hero h1{
+  font-size:clamp(52px,6vw,76px);
+  line-height:.98;
+}
+.services-mockup-page .services-mock-hero h1{
+  font-size:clamp(52px,6vw,76px);
+  line-height:.98;
+}
+@media(max-width:760px){
+ .page-hero.reviews-hero .hero-title,
+ .page-hero.estimate-hero .hero-title,
+ .page-hero.blog-hero .hero-title,
+ .page-hero.faq-hero .hero-title,
+ .page-hero.call-hero .hero-title{font-size:clamp(44px,9vw,60px)}
+ .service-areas-mockup-hero h1{font-size:clamp(44px,9vw,60px)}
+ .services-mockup-page .services-mock-hero h1{font-size:clamp(42px,8.7vw,58px)}
+}
