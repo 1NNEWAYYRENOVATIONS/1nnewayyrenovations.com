@@ -1516,3 +1516,55 @@ main > h1{
    font-size:clamp(49px,9.7vw,66px);
  }
 }
+
+
+/* Site-wide title hierarchy aligned to the Our Work page */
+.page-hero .hero-title{
+  font-size:clamp(56px,6vw,76px);
+  line-height:.98;
+  text-transform:capitalize;
+}
+.page-hero .eyebrow,
+.page-hero .section-kicker{
+  text-transform:uppercase;
+}
+.page-hero .hero-lead{
+  line-height:1.35;
+}
+/* Custom mockup heroes use the same title scale and consistent capitalization */
+.company-page .company-mockup-hero h1{
+  font-size:clamp(56px,6vw,76px);
+  line-height:.98;
+  text-transform:uppercase;
+}
+.service-areas-mockup-hero h1{
+  font-size:clamp(56px,6vw,76px);
+  line-height:.98;
+  text-transform:uppercase;
+}
+.services-mockup-page .services-mock-hero h1{
+  font-size:clamp(56px,6vw,76px);
+  line-height:.98;
+  text-transform:uppercase;
+}
+.page-home #home-title{
+  font-size:clamp(56px,6vw,76px);
+  line-height:.98;
+  text-transform:uppercase;
+}
+.master-hero .hero-title{
+  font-size:clamp(56px,6vw,76px);
+  line-height:.98;
+  text-transform:capitalize;
+}
+@media(max-width:760px){
+ .page-hero .hero-title,
+ .company-page .company-mockup-hero h1,
+ .service-areas-mockup-hero h1,
+ .services-mockup-page .services-mock-hero h1,
+ .page-home #home-title,
+ .master-hero .hero-title{
+   font-size:clamp(44px,9vw,60px);
+   line-height:.98;
+ }
+}
