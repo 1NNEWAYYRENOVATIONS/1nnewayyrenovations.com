@@ -1299,3 +1299,23 @@ body{font-size:14px}
  background-position:center center !important;
  background-size:cover !important;
 }
+
+
+/* MasterPlan hero: show the full source image instead of cropping it */
+.page-shell .page-hero.master-hero.approved-image-hero{
+  background-size:contain !important;
+  background-repeat:no-repeat !important;
+  background-position:right center !important;
+  background-color:#030303 !important;
+  min-height:0;
+  height:auto;
+  aspect-ratio:1024 / 275;
+}
+@media(max-width:760px){
+ .page-shell .page-hero.master-hero.approved-image-hero{
+   aspect-ratio:auto;
+   min-height:250px;
+   background-size:auto 100% !important;
+   background-position:right center !important;
+ }
+}
