@@ -1334,3 +1334,18 @@ body{font-size:14px}
    background-position:center center !important;
  }
 }
+
+
+/* Services hero: slightly reduce background image to reveal more of the full photo */
+.services-mockup-page .services-mock-hero{
+  background-size:94% auto !important;
+  background-position:right center !important;
+  background-repeat:no-repeat !important;
+  background-color:#030303 !important;
+}
+@media(max-width:620px){
+ .services-mockup-page .services-mock-hero{
+   background-size:auto 94% !important;
+   background-position:center center !important;
+ }
+}
