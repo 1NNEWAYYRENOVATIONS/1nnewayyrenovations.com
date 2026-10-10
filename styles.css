@@ -1064,3 +1064,69 @@ body{font-size:14px}
  .services-mockup-page .services-mock-hero h1{font-size:clamp(36px,9.2vw,50px)}
  .services-mockup-page .services-mock-hero p{font-size:15px}
 }
+
+
+/* Approved Services mockup: use the exact extracted night-pool photograph and scale the typography with the reference layout. */
+.services-mockup-page .services-mock-hero{
+  height:clamp(473px,46.2vw,900px);
+  min-height:0;
+  background-image:url('services-hero-approved-crop.jpg');
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.services-mockup-page .services-mock-hero:before{
+  background:linear-gradient(90deg,rgba(0,0,0,.99) 0%,rgba(0,0,0,.96) 30%,rgba(0,0,0,.76) 44%,rgba(0,0,0,.22) 67%,rgba(0,0,0,.02) 100%);
+}
+.services-mockup-page .services-mock-hero-copy{
+  padding:3.5vw 4.9% 2.2vw;
+  max-width:none;
+  margin:0;
+}
+.services-mockup-page .services-mock-eyebrow{
+  font-size:clamp(20px,1.95vw,38px);
+  letter-spacing:.42em;
+  line-height:1.2;
+  margin-bottom:.45em;
+}
+.services-mockup-page .services-mock-short-rule{
+  width:5.7vw;
+  max-width:110px;
+  min-width:58px;
+  height:4px;
+  margin-bottom:1.1vw;
+}
+.services-mockup-page .services-mock-hero h1{
+  font-size:clamp(52px,5.9vw,112px);
+  line-height:.86;
+  letter-spacing:-.052em;
+  max-width: none;
+  margin:0;
+}
+.services-mockup-page .services-mock-title-rule{
+  width:10.2vw;
+  max-width:200px;
+  height:4px;
+  margin:1.35vw 0 1.45vw;
+}
+.services-mockup-page .services-mock-hero p{
+  font-size:clamp(18px,1.75vw,33px);
+  line-height:1.38;
+  max-width:44vw;
+  margin:0;
+}
+@media(max-width:900px){
+ .services-mockup-page .services-mock-hero{height:clamp(440px,60vw,620px)}
+ .services-mockup-page .services-mock-hero-copy{padding:35px 4% 24px}
+ .services-mockup-page .services-mock-eyebrow{font-size:clamp(17px,2.4vw,24px)}
+ .services-mockup-page .services-mock-hero h1{font-size:clamp(43px,6.3vw,60px)}
+ .services-mockup-page .services-mock-title-rule{width:104px;margin:15px 0 18px}
+ .services-mockup-page .services-mock-hero p{font-size:17px;max-width:430px}
+}
+@media(max-width:620px){
+ .services-mockup-page .services-mock-hero{height:auto;min-height:440px;background-position:61% center}
+ .services-mockup-page .services-mock-hero-copy{padding:30px 19px}
+ .services-mockup-page .services-mock-eyebrow{font-size:14px;letter-spacing:.35em}
+ .services-mockup-page .services-mock-hero h1{font-size:clamp(36px,9.2vw,50px)}
+ .services-mockup-page .services-mock-hero p{font-size:15px;max-width:390px}
+}
