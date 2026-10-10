@@ -1497,3 +1497,22 @@ main > h1{
    font-size:clamp(47px,9.4vw,64px);
  }
 }
+
+
+/* Slightly enlarge the requested page hero titles */
+.page-hero.reviews-hero .hero-title,
+.page-hero.estimate-hero .hero-title,
+.page-hero.blog-hero .hero-title,
+.page-hero.faq-hero .hero-title,
+.page-hero.call-hero .hero-title{
+  font-size:clamp(58px,6.5vw,82px);
+}
+@media(max-width:760px){
+ .page-hero.reviews-hero .hero-title,
+ .page-hero.estimate-hero .hero-title,
+ .page-hero.blog-hero .hero-title,
+ .page-hero.faq-hero .hero-title,
+ .page-hero.call-hero .hero-title{
+   font-size:clamp(49px,9.7vw,66px);
+ }
+}
