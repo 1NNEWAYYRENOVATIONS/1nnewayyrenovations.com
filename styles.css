@@ -1174,3 +1174,24 @@ body{font-size:14px}
    margin:0;
  }
 }
+
+
+/* Force the approved black-to-metallic-gold headline treatment on both gold headline lines. */
+.services-mockup-page .services-mock-hero h1 span{
+  display:inline;
+  color:#f3c64d;
+  background:linear-gradient(180deg,#fff1a1 0%,#ffd95b 24%,#e8aa18 57%,#9a6200 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 1px 0 rgba(255,238,155,.10);
+}
+@media(max-width:620px){
+ .services-mockup-page .services-mock-hero h1 span{
+   color:#f3c64d;
+   background:linear-gradient(180deg,#fff1a1 0%,#ffd95b 24%,#e8aa18 57%,#9a6200 100%);
+   -webkit-background-clip:text;
+   background-clip:text;
+   -webkit-text-fill-color:transparent;
+ }
+}
