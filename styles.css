@@ -1486,3 +1486,14 @@ main > h1{
    line-height:.98 !important;
  }
 }
+
+
+/* Reviews page: slightly increase hero title size without changing other pages */
+.page-hero.reviews-hero .hero-title{
+  font-size:clamp(56px,6.3vw,80px);
+}
+@media(max-width:760px){
+ .page-hero.reviews-hero .hero-title{
+   font-size:clamp(47px,9.4vw,64px);
+ }
+}
