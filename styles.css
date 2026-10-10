@@ -983,3 +983,72 @@ body{font-size:14px}
 /* Services nav state: only Services is highlighted on this page. */
 .services-mockup-page .nav a:first-child{color:#fff;border-bottom-color:transparent}
 .services-mockup-page .nav a.active{color:#ffd000;border-bottom-color:#ffd000}
+
+
+/* FINAL SERVICES MOCKUP ALIGNMENT — layout proportions and exact service ordering */
+.services-mockup-page{margin:0;background:#030303;color:#fff}
+.services-mockup-page .site-header{height:auto;background:#030303;border-bottom:2px solid #e9b900}
+.services-mockup-page .header-inner{box-sizing:border-box;width:100%;max-width:1500px;min-height:102px;grid-template-columns:205px minmax(0,1fr) 145px;gap:10px;padding:4px 18px}
+.services-mockup-page .brand{display:flex;align-items:center;justify-content:center}
+.services-mockup-page .brand img{display:block;width:190px;height:90px;object-fit:contain}
+.services-mockup-page .nav{display:flex;align-items:center;justify-content:center;gap:2px;white-space:nowrap}
+.services-mockup-page .nav a{font-size:12px;padding:10px 6px 9px;line-height:1.1}
+.services-mockup-page .nav a.active{color:#ffd000;border-bottom:3px solid #ffd000}
+.services-mockup-page .header-call{justify-self:end;white-space:nowrap;padding:11px 15px}
+.services-mock-hero{height:473px;min-height:0;box-sizing:border-box;background-color:#030303;background-image:url('home-hero-optimized.jpg');background-position:center 48%;background-size:cover;background-repeat:no-repeat;border-bottom:1px solid #e9b900}
+.services-mock-hero:before{background:linear-gradient(90deg,rgba(0,0,0,.99) 0%,rgba(0,0,0,.96) 31%,rgba(0,0,0,.72) 45%,rgba(0,0,0,.20) 67%,rgba(0,0,0,.03) 100%)}
+.services-mock-hero-copy{max-width:none;box-sizing:border-box;margin:0;padding:36px 4.8% 22px}
+.services-mock-eyebrow{font-size:20px;letter-spacing:.42em;line-height:1.2}
+.services-mock-hero h1{font-size:clamp(46px,5.8vw,70px);line-height:.86;letter-spacing:-.045em}
+.services-mock-title-rule{margin:15px 0 18px}
+.services-mock-hero p{font-size:18px;line-height:1.36;max-width:455px}
+.services-mock-grid{box-sizing:border-box;max-width:none;width:100%;margin:0;padding:0 3.2% 36px;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px 10px}
+.services-mock-card{box-sizing:border-box;min-height:300px;padding:8px 7px 12px;border:2px solid #edc000;border-radius:7px}
+.services-mock-image{height:137px;background-position:center 43%;background-size:cover;background-repeat:no-repeat}
+.services-mock-card h2{font-size:14px;line-height:1.2}
+.services-mock-card p{font-size:14px;line-height:1.42}
+.services-mock-benefits{box-sizing:border-box;width:100%;padding:12px 3.2%;grid-template-columns:repeat(3,minmax(0,1fr))}
+.services-mock-benefit{gap:14px;padding:6px 17px;min-width:0}
+.services-mockup-page .mockup-footer{box-sizing:border-box;background-color:#030303}
+@media(max-width:900px){
+ .services-mockup-page .header-inner{grid-template-columns:150px minmax(0,1fr) 112px;gap:5px;padding:5px 10px}
+ .services-mockup-page .brand img{width:145px;height:82px}
+ .services-mockup-page .nav{gap:0}
+ .services-mockup-page .nav a{font-size:10px;padding:8px 4px}
+ .services-mockup-page .header-call{padding:10px 9px}
+ .services-mock-hero{height:440px}
+ .services-mock-hero-copy{padding:35px 4%}
+ .services-mock-hero h1{font-size:clamp(43px,6.3vw,60px)}
+ .services-mock-grid{padding-left:2%;padding-right:2%;gap:8px}
+ .services-mock-card{min-height:285px}
+ .services-mock-image{height:115px}
+ .services-mock-card p{font-size:12px}
+ .services-mock-card h2{font-size:12px}
+ .services-mock-benefit{padding:6px 8px;gap:8px}
+ .services-mock-benefit strong{font-size:11px}
+ .services-mock-benefit p{font-size:10px}
+}
+@media(max-width:620px){
+ .services-mockup-page .header-inner{grid-template-columns:1fr auto;min-height:auto}
+ .services-mockup-page .brand img{width:155px;height:65px}
+ .services-mockup-page .nav{grid-column:1/-1;grid-row:2;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+ .services-mockup-page .nav a{font-size:11px;padding:8px 7px}
+ .services-mockup-page .header-call{grid-column:2;grid-row:1}
+ .services-mock-hero{height:auto;min-height:440px;background-position:61% center}
+ .services-mock-hero:before{background:linear-gradient(90deg,rgba(0,0,0,.98),rgba(0,0,0,.82) 60%,rgba(0,0,0,.32))}
+ .services-mock-hero-copy{padding:30px 19px}
+ .services-mock-eyebrow{font-size:14px;letter-spacing:.35em}
+ .services-mock-hero h1{font-size:clamp(38px,10vw,54px)}
+ .services-mock-hero p{font-size:15px;max-width:390px}
+ .services-mock-grid{grid-template-columns:repeat(2,minmax(0,1fr));padding:0 12px 25px;gap:9px}
+ .services-mock-card{min-height:270px;padding:6px 6px 10px}
+ .services-mock-image{height:105px}
+ .services-mock-icon{width:49px;height:49px;font-size:28px;margin-top:-25px}
+ .services-mock-card h2{font-size:11px}
+ .services-mock-card p{font-size:12px;line-height:1.35}
+ .services-mock-benefits{grid-template-columns:1fr;padding:0 18px}
+ .services-mock-benefit{justify-content:flex-start;border-right:0;border-bottom:1px solid #8d7200;padding:12px 5px}
+ .services-mock-benefit:last-child{border-bottom:0}
+ .services-mock-benefit strong{font-size:12px}
+ .services-mock-benefit p{font-size:11px}
+}
