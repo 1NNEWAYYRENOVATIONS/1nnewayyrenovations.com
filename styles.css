@@ -1694,3 +1694,29 @@ main > h1{
   width:182px !important;
   height:88px !important;
 }
+
+/* Match Home and Services header heights to the standard Company page header */
+.page-home .approved-home-header{
+  min-height:76px !important;
+}
+.page-home .approved-home-header .header-inner{
+  min-height:76px !important;
+  padding-top:4px !important;
+  padding-bottom:4px !important;
+}
+.page-home .approved-home-header .brand img{
+  width:140px !important;
+  height:66px !important;
+}
+.services-mockup-page .site-header{
+  min-height:76px !important;
+}
+.services-mockup-page .header-inner{
+  min-height:76px !important;
+  padding-top:4px !important;
+  padding-bottom:4px !important;
+}
+.services-mockup-page .brand img{
+  height:66px !important;
+  object-fit:contain;
+}
