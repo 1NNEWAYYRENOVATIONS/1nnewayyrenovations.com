@@ -1615,3 +1615,12 @@ main > h1{
    line-height:.98 !important;
  }
 }
+
+
+/* Our Services hero: use the newly uploaded optimized renovation craftsmanship image */
+.services-mockup-page .services-mock-hero{
+  background-image:url('1NNEWAYY_Our_Services_Hero_Optimized.webp');
+  background-position:center 48%;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
