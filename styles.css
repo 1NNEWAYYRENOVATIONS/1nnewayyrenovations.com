@@ -1420,3 +1420,16 @@ body{font-size:14px}
   -webkit-text-fill-color:transparent;
   text-shadow:none;
 }
+
+
+/* Apply the Services mockup's metallic-gold headline treatment to Home, Company, and Service Areas */
+.page-home #home-title strong,
+.company-page .company-mockup-hero h1 span,
+.service-areas-mockup-hero h1 span{
+  background:linear-gradient(180deg,#fff2a6 0%,#ffdc62 25%,#e7ad22 58%,#946000 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent !important;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none;
+}
