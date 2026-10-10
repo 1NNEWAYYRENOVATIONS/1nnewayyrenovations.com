@@ -1319,3 +1319,18 @@ body{font-size:14px}
    background-position:right center !important;
  }
 }
+
+
+/* Our Work hero: slightly scale down the background so the full photo is visible */
+.work-hero.media-hero{
+  background-size:94% auto !important;
+  background-position:right center !important;
+  background-repeat:no-repeat !important;
+  background-color:#030303 !important;
+}
+@media(max-width:760px){
+ .work-hero.media-hero{
+   background-size:auto 94% !important;
+   background-position:center center !important;
+ }
+}
