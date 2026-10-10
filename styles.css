@@ -997,11 +997,11 @@ body{font-size:14px}
 .services-mockup-page .header-call{justify-self:end;white-space:nowrap;padding:11px 15px}
 .services-mock-hero{height:473px;min-height:0;box-sizing:border-box;background-color:#030303;background-image:url('home-hero-optimized.jpg');background-position:center 48%;background-size:cover;background-repeat:no-repeat;border-bottom:1px solid #e9b900}
 .services-mock-hero:before{background:linear-gradient(90deg,rgba(0,0,0,.99) 0%,rgba(0,0,0,.96) 31%,rgba(0,0,0,.72) 45%,rgba(0,0,0,.20) 67%,rgba(0,0,0,.03) 100%)}
-.services-mock-hero-copy{max-width:none;box-sizing:border-box;margin:0;padding:36px 4.8% 22px}
+.services-mock-hero-copy{max-width:none;box-sizing:border-box;margin:0;padding:36px 4.8% 22px;text-align:left}
 .services-mock-eyebrow{font-size:20px;letter-spacing:.42em;line-height:1.2}
-.services-mock-hero h1{font-size:clamp(46px,5.8vw,70px);line-height:.86;letter-spacing:-.045em}
+.services-mock-hero h1{font-size:clamp(42px,5.4vw,64px);line-height:.88;letter-spacing:-.045em}
 .services-mock-title-rule{margin:15px 0 18px}
-.services-mock-hero p{font-size:18px;line-height:1.36;max-width:455px}
+.services-mock-hero p{font-size:17px;line-height:1.38;max-width:430px}
 .services-mock-grid{box-sizing:border-box;max-width:none;width:100%;margin:0;padding:0 3.2% 36px;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px 10px}
 .services-mock-card{box-sizing:border-box;min-height:300px;padding:8px 7px 12px;border:2px solid #edc000;border-radius:7px}
 .services-mock-image{height:137px;background-position:center 43%;background-size:cover;background-repeat:no-repeat}
