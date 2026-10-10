@@ -1666,3 +1666,17 @@ main > h1{
   padding-top:7px !important;
   padding-bottom:7px !important;
 }
+
+/* Home page: proportionally tighten the header container, inner row, and logo */
+.page-home .approved-home-header{
+  min-height:120px !important;
+}
+.page-home .approved-home-header .header-inner{
+  min-height:120px !important;
+  padding-top:6px !important;
+  padding-bottom:6px !important;
+}
+.page-home .approved-home-header .brand img{
+  width:190px !important;
+  height:94px !important;
+}
