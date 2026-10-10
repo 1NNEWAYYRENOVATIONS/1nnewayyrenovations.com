@@ -1052,3 +1052,15 @@ body{font-size:14px}
  .services-mock-benefit strong{font-size:12px}
  .services-mock-benefit p{font-size:11px}
 }
+
+
+/* Targeted hero text correction based on the supplied Services mockup */
+.services-mockup-page .services-mock-hero-copy{padding-left:4.9%;padding-right:4.9%;max-width:none}
+.services-mockup-page .services-mock-hero h1{font-size:clamp(44px,4.95vw,60px);line-height:.88;letter-spacing:-.052em;max-width:720px}
+.services-mockup-page .services-mock-eyebrow{font-size:20px;letter-spacing:.42em}
+.services-mockup-page .services-mock-hero p{font-size:17px;line-height:1.38;max-width:430px;margin-top:0}
+@media(max-width:620px){
+ .services-mockup-page .services-mock-hero-copy{padding:30px 19px}
+ .services-mockup-page .services-mock-hero h1{font-size:clamp(36px,9.2vw,50px)}
+ .services-mockup-page .services-mock-hero p{font-size:15px}
+}
