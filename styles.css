@@ -1394,3 +1394,29 @@ body{font-size:14px}
  .page-hero.service-areas-hero .hero-lead,
  .service-areas-hero .hero-lead{font-size:13px;line-height:1.32}
 }
+
+
+/* SITE-WIDE APPROVED METALLIC GOLD TYPOGRAPHY — consistent across all page mockups */
+:root{
+  --brand-gold-highlight:#fff2a6;
+  --brand-gold-light:#ffdc62;
+  --brand-gold-mid:#e7ad22;
+  --brand-gold-deep:#946000;
+}
+.hero-title .gold,
+.home-hero-copy h1 strong,
+.home-heading span,
+.services-mock-hero h1 span,
+.work-hero .hero-title .gold,
+.master-hero .hero-title .gold,
+.service-areas-hero .hero-title .gold,
+.company-hero .hero-title .gold,
+.page-title .gold,
+.brand-gold-text{
+  background:linear-gradient(180deg,var(--brand-gold-highlight) 0%,var(--brand-gold-light) 25%,var(--brand-gold-mid) 58%,var(--brand-gold-deep) 100%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none;
+}
