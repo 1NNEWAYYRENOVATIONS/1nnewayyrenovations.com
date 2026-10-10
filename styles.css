@@ -1349,3 +1349,30 @@ body{font-size:14px}
    background-position:center center !important;
  }
 }
+
+
+/* Slightly reduce hero text scale on Service Areas and Services pages */
+.service-areas-hero .hero-title,
+.page-hero.service-areas-hero .hero-title{
+  font-size:clamp(42px,5.1vw,66px);
+}
+.service-areas-hero .hero-lead,
+.page-hero.service-areas-hero .hero-lead{
+  font-size:clamp(15px,1.55vw,18px);
+  line-height:1.35;
+}
+.services-mockup-page .services-mock-hero h1{
+  font-size:clamp(42px,5.45vw,64px);
+}
+.services-mockup-page .services-mock-hero p{
+  font-size:clamp(16px,1.6vw,18px);
+  line-height:1.36;
+}
+@media(max-width:620px){
+ .services-mockup-page .services-mock-hero h1{font-size:clamp(34px,8.7vw,46px)}
+ .services-mockup-page .services-mock-hero p{font-size:14px}
+ .service-areas-hero .hero-title,
+ .page-hero.service-areas-hero .hero-title{font-size:clamp(38px,8.2vw,52px)}
+ .service-areas-hero .hero-lead,
+ .page-hero.service-areas-hero .hero-lead{font-size:14px}
+}
