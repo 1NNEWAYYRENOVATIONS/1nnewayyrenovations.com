@@ -1568,3 +1568,27 @@ main > h1{
    line-height:.98;
  }
 }
+
+
+/* Definitive title normalization: match Our Work's hero title scale across every page.
+   !important intentionally overrides older page-specific size tweaks above. */
+.page-hero .hero-title,
+.company-page .company-mockup-hero h1,
+.service-areas-mockup-hero h1,
+.services-mockup-page .services-mock-hero h1,
+.page-home #home-title,
+.master-hero .hero-title{
+  font-size:clamp(56px,6vw,76px) !important;
+  line-height:.98 !important;
+}
+@media(max-width:760px){
+ .page-hero .hero-title,
+ .company-page .company-mockup-hero h1,
+ .service-areas-mockup-hero h1,
+ .services-mockup-page .services-mock-hero h1,
+ .page-home #home-title,
+ .master-hero .hero-title{
+   font-size:clamp(44px,9vw,60px) !important;
+   line-height:.98 !important;
+ }
+}
