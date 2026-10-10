@@ -1286,3 +1286,16 @@ body{font-size:14px}
  .masterplan-image-card>img{height:115px}
  .masterplan-highlights .masterplan-image-card>img{height:105px}
 }
+
+
+/* Final asset hookup after MasterPlan image upload */
+.page-shell .page-hero.master-hero.approved-image-hero{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.97) 0%,rgba(0,0,0,.78) 32%,rgba(0,0,0,.10) 68%),url('masterplan-hero-approved.jpg') !important;
+ background-position:center center !important;
+ background-size:cover !important;
+}
+.page-shell .masterplan-section .masterplan-video-poster{
+ background-image:linear-gradient(90deg,rgba(0,0,0,.03),rgba(0,0,0,.03)),url('masterplan-overview-video-poster.jpg') !important;
+ background-position:center center !important;
+ background-size:cover !important;
+}
