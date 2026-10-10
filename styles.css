@@ -1680,3 +1680,17 @@ main > h1{
   width:190px !important;
   height:94px !important;
 }
+
+/* Home page: make one final small reduction to header height and logo scale */
+.page-home .approved-home-header{
+  min-height:112px !important;
+}
+.page-home .approved-home-header .header-inner{
+  min-height:112px !important;
+  padding-top:5px !important;
+  padding-bottom:5px !important;
+}
+.page-home .approved-home-header .brand img{
+  width:182px !important;
+  height:88px !important;
+}
