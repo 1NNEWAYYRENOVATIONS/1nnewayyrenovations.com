@@ -1659,3 +1659,10 @@ main > h1{
   background-size:cover !important;
   background-repeat:no-repeat !important;
 }
+
+/* Home page: slightly reduce the header's vertical footprint */
+.page-home .approved-home-header .header-inner{
+  min-height:128px !important;
+  padding-top:7px !important;
+  padding-bottom:7px !important;
+}
