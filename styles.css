@@ -1130,3 +1130,47 @@ body{font-size:14px}
  .services-mockup-page .services-mock-hero h1{font-size:clamp(36px,9.2vw,50px)}
  .services-mockup-page .services-mock-hero p{font-size:15px;max-width:390px}
 }
+
+
+/* Match the supplied 460px Services-title reference: exact four-line wording, compact serif headline, and paragraph wrapping. */
+@media(max-width:620px){
+ .services-mockup-page .services-mock-hero-copy{
+   padding:12px 24px 18px;
+ }
+ .services-mockup-page .services-mock-eyebrow{
+   font-family:Arial,Helvetica,sans-serif;
+   font-size:20px;
+   letter-spacing:.34em;
+   line-height:1.15;
+   margin-bottom:9px;
+ }
+ .services-mockup-page .services-mock-short-rule{
+   width:55px;
+   min-width:55px;
+   height:4px;
+   margin-bottom:10px;
+ }
+ .services-mockup-page .services-mock-hero h1{
+   font-family:Georgia,'Times New Roman',serif;
+   font-weight:700;
+   font-size:clamp(36px,9.2vw,43px);
+   line-height:.97;
+   letter-spacing:-.055em;
+   max-width:none;
+   margin:0;
+   white-space:normal;
+ }
+ .services-mockup-page .services-mock-title-rule{
+   width:95px;
+   height:4px;
+   margin:12px 0 18px;
+ }
+ .services-mockup-page .services-mock-hero p{
+   font-family:Arial,Helvetica,sans-serif;
+   font-size:16px;
+   line-height:1.38;
+   max-width:none;
+   width:100%;
+   margin:0;
+ }
+}
