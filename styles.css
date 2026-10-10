@@ -1651,3 +1651,11 @@ main > h1{
   background-size:cover !important;
   background-repeat:no-repeat !important;
 }
+
+/* Request On-Site Estimate hero: use the newly uploaded approved optimized image */
+.page-shell .page-hero.estimate-hero.media-hero{
+  background-image:linear-gradient(90deg,rgba(0,0,0,.48) 0%,rgba(0,0,0,.24) 42%,rgba(0,0,0,.02) 76%),url('1NNEWAYY_Request_Onsite_Estimate_Hero_Optimized.webp') !important;
+  background-position:center center !important;
+  background-size:cover !important;
+  background-repeat:no-repeat !important;
+}
