@@ -1624,3 +1624,12 @@ main > h1{
   background-size:cover;
   background-repeat:no-repeat;
 }
+
+
+/* MasterPlan hero: replace the previous hero photo with the newly uploaded optimized image */
+.master-hero.media-hero.approved-image-hero{
+  background-image:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.68) 34%,rgba(0,0,0,.12) 72%),url('1NNEWAYY_MasterPlan_Hero_Optimized.webp') !important;
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
