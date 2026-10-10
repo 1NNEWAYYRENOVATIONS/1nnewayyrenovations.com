@@ -1376,3 +1376,21 @@ body{font-size:14px}
  .service-areas-hero .hero-lead,
  .page-hero.service-areas-hero .hero-lead{font-size:14px}
 }
+
+
+/* Service Areas only: one additional small reduction in hero typography */
+.page-hero.service-areas-hero .hero-title,
+.service-areas-hero .hero-title{
+  font-size:clamp(39px,4.8vw,62px);
+}
+.page-hero.service-areas-hero .hero-lead,
+.service-areas-hero .hero-lead{
+  font-size:clamp(14px,1.4vw,17px);
+  line-height:1.32;
+}
+@media(max-width:620px){
+ .page-hero.service-areas-hero .hero-title,
+ .service-areas-hero .hero-title{font-size:clamp(36px,7.8vw,48px)}
+ .page-hero.service-areas-hero .hero-lead,
+ .service-areas-hero .hero-lead{font-size:13px;line-height:1.32}
+}
