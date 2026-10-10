@@ -1198,10 +1198,10 @@ body{font-size:14px}
 
 
 /* OUR WORK — approved full-page mockup treatment */
-.work-hero{--hero:url('ourwork-hero-approved.jpg')}
+.work-hero{--hero:url('1NNEWAYY_Our_Work_Hero_Optimized.webp')}
 .work-hero.media-hero{
   min-height:330px;
-  background-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 34%,rgba(0,0,0,.08) 67%),url('ourwork-hero-approved.jpg');
+  background-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 34%,rgba(0,0,0,.08) 67%),url('1NNEWAYY_Our_Work_Hero_Optimized.webp');
   background-position:center center;
   background-size:cover;
   border-bottom:2px solid var(--gold);
