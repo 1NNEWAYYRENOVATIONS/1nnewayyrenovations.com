@@ -2594,17 +2594,17 @@ main > h1{
 }
 
 
-/* Reviews hero: refine reference framing, retain readable left text, and reveal the brighter scene on the right */
+/* Reviews hero: match the supplied reference image's wide framing and balanced lighting */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-image:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.76) 28%,rgba(0,0,0,.38) 48%,rgba(0,0,0,.04) 78%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
-  background-position:left center !important;
-  background-size:130% auto !important;
+  background-image:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 31%,rgba(0,0,0,.18) 58%,rgba(0,0,0,0) 82%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
+  background-position:center center !important;
+  background-size:cover !important;
   background-repeat:no-repeat !important;
   background-color:#050505 !important;
 }
 @media(max-width:800px){
   .page-shell .page-hero.reviews-hero.media-hero{
-    background-position:left center !important;
-    background-size:130% auto !important;
+    background-position:center center !important;
+    background-size:cover !important;
   }
 }
