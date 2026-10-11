@@ -2594,9 +2594,9 @@ main > h1{
 }
 
 
-/* Reviews hero: match the supplied reference image's wide framing and balanced lighting */
+/* Reviews hero: match the approved reference attachment's original wide composition exactly */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-image:linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 31%,rgba(0,0,0,.18) 58%,rgba(0,0,0,0) 82%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
+  background-image:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.48) 32%,rgba(0,0,0,.12) 62%,rgba(0,0,0,0) 100%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
   background-position:center center !important;
   background-size:cover !important;
   background-repeat:no-repeat !important;
