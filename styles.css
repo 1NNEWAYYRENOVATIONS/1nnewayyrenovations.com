@@ -2594,17 +2594,17 @@ main > h1{
 }
 
 
-/* Reviews hero: preserve zoom-out size and move only the image right to crop the vehicle */
+/* Reviews hero: match the approved reference with a full-width image, brighter right side, and no vehicle */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-image:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 34%,rgba(0,0,0,.14) 72%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
-  background-position:calc(0% + 500px) center !important;
-  background-size:auto 100% !important;
+  background-image:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 30%,rgba(0,0,0,.28) 58%,rgba(0,0,0,.02) 100%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
+  background-position:left center !important;
+  background-size:190% auto !important;
   background-repeat:no-repeat !important;
   background-color:#050505 !important;
 }
 @media(max-width:800px){
   .page-shell .page-hero.reviews-hero.media-hero{
-    background-position:calc(0% + 300px) center !important;
-    background-size:auto 100% !important;
+    background-position:left center !important;
+    background-size:190% auto !important;
   }
 }
