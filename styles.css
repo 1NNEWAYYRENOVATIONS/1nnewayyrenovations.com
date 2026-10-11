@@ -1876,3 +1876,29 @@ main > h1{
   width:176px !important;
   height:82px !important;
 }
+
+/* Service Areas hero: reduce oversized headline typography to fit the approved composition */
+.service-areas-hero-copy{
+  padding-top:38px !important;
+  padding-bottom:26px !important;
+}
+.service-areas-eyebrow{
+  font-size:18px !important;
+  letter-spacing:.34em !important;
+  margin-bottom:18px !important;
+}
+.service-areas-hero-copy h1{
+  font-size:clamp(42px,4.5vw,62px) !important;
+  line-height:.94 !important;
+  letter-spacing:-.035em !important;
+}
+.service-areas-hero-copy p{
+  font-size:clamp(15px,1.8vw,21px) !important;
+  margin-top:14px !important;
+}
+@media(max-width:720px){
+  .service-areas-hero-copy{padding:30px 20px 24px !important}
+  .service-areas-eyebrow{font-size:13px !important;letter-spacing:.28em !important}
+  .service-areas-hero-copy h1{font-size:clamp(34px,8vw,48px) !important;line-height:.98 !important}
+  .service-areas-hero-copy p{font-size:15px !important}
+}
