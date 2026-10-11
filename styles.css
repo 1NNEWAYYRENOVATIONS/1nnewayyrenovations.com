@@ -1787,3 +1787,35 @@ main > h1{
 .page-home .approved-home-header .header-call span{
   display:inline !important;
 }
+
+/* Site-wide header standard: keep the Call Us control consistent on every page */
+.site-header .header-call{
+  box-sizing:border-box !important;
+  width:auto !important;
+  min-width:145px !important;
+  height:auto !important;
+  padding:10px 14px !important;
+  font-size:12px !important;
+  line-height:1.2 !important;
+  gap:8px !important;
+  border-radius:30px !important;
+  white-space:nowrap !important;
+  justify-content:center !important;
+}
+.site-header .header-call span{
+  display:inline !important;
+}
+@media(max-width:760px){
+  .site-header .header-call{
+    min-width:0 !important;
+    padding:8px 9px !important;
+    font-size:10px !important;
+  }
+}
+@media(max-width:480px){
+  .site-header .header-call{
+    min-width:0 !important;
+    padding:7px !important;
+    font-size:9px !important;
+  }
+}
