@@ -1988,3 +1988,78 @@ main > h1{
   .services-mockup-page .services-mock-hero-copy h1#services-title{font-size:clamp(30px,7vw,42px) !important}
   .services-mockup-page .services-mock-hero-copy p{font-size:13px !important}
 }
+
+/* Approved hero typography scale: consistently reduce oversized titles across remaining pages */
+.company-hero .hero-title{
+  font-size:clamp(38px,4.2vw,56px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.035em !important;
+}
+.company-hero .eyebrow{
+  font-size:16px !important;
+  letter-spacing:.32em !important;
+}
+.work-hero .hero-title{
+  font-size:clamp(38px,4.2vw,54px) !important;
+  line-height:1 !important;
+}
+.work-hero .eyebrow,
+.master-hero .eyebrow,
+.page-hero.reviews-hero .eyebrow,
+.page-hero.estimate-hero .eyebrow,
+.page-hero.blog-hero .eyebrow,
+.page-hero.faq-hero .eyebrow{
+  font-size:15px !important;
+  letter-spacing:.32em !important;
+}
+.master-hero .hero-title{
+  font-size:clamp(38px,4.2vw,54px) !important;
+  line-height:1 !important;
+}
+.page-shell .page-hero.reviews-hero .hero-title,
+.page-shell .page-hero.estimate-hero .hero-title,
+.page-shell .page-hero.blog-hero .hero-title,
+.page-shell .page-hero.faq-hero .hero-title{
+  font-size:clamp(38px,4.2vw,54px) !important;
+  line-height:1 !important;
+  letter-spacing:-.035em !important;
+}
+.work-hero .hero-lead,
+.master-hero .hero-lead,
+.page-hero.reviews-hero .hero-lead,
+.page-hero.estimate-hero .hero-lead,
+.page-hero.blog-hero .hero-lead,
+.page-hero.faq-hero .hero-lead{
+  font-size:clamp(14px,1.4vw,18px) !important;
+  line-height:1.35 !important;
+}
+@media(max-width:720px){
+  .company-hero .hero-title,
+  .work-hero .hero-title,
+  .master-hero .hero-title,
+  .page-shell .page-hero.reviews-hero .hero-title,
+  .page-shell .page-hero.estimate-hero .hero-title,
+  .page-shell .page-hero.blog-hero .hero-title,
+  .page-shell .page-hero.faq-hero .hero-title{
+    font-size:clamp(30px,7vw,42px) !important;
+    line-height:1.02 !important;
+  }
+  .company-hero .eyebrow,
+  .work-hero .eyebrow,
+  .master-hero .eyebrow,
+  .page-hero.reviews-hero .eyebrow,
+  .page-hero.estimate-hero .eyebrow,
+  .page-hero.blog-hero .eyebrow,
+  .page-hero.faq-hero .eyebrow{
+    font-size:12px !important;
+    letter-spacing:.28em !important;
+  }
+  .work-hero .hero-lead,
+  .master-hero .hero-lead,
+  .page-hero.reviews-hero .hero-lead,
+  .page-hero.estimate-hero .hero-lead,
+  .page-hero.blog-hero .hero-lead,
+  .page-hero.faq-hero .hero-lead{
+    font-size:14px !important;
+  }
+}
