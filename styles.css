@@ -1720,3 +1720,9 @@ main > h1{
   height:66px !important;
   object-fit:contain;
 }
+
+/* Home page: slightly enlarge the top-left brand logo while preserving header proportions */
+.page-home .approved-home-header .brand img{
+  width:150px !important;
+  height:70px !important;
+}
