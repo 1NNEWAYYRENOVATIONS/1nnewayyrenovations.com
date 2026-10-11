@@ -2594,14 +2594,14 @@ main > h1{
 }
 
 
-/* REVISION 2 FINAL MICRO-ADJUSTMENT: move Reviews hero framing a little farther right */
+/* REVISION 2 MICRO-ADJUSTMENT: move Reviews hero framing slightly farther right */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-position:36% center !important;
+  background-position:30% center !important;
   background-size:115% auto !important;
 }
 @media(max-width:800px){
   .page-shell .page-hero.reviews-hero.media-hero{
-    background-position:36% center !important;
+    background-position:30% center !important;
     background-size:cover !important;
   }
 }
