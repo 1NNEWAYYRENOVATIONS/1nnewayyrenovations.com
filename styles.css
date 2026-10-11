@@ -2594,17 +2594,17 @@ main > h1{
 }
 
 
-/* Reviews hero: use the approved cropped image directly; no added gradient or crop offsets */
+/* Reviews hero: zoom out while preserving the current centered image position */
 .page-shell .page-hero.reviews-hero.media-hero{
   background-image:url('1NNEWAYY_Reviews_Hero_Cropped.png') !important;
   background-position:center center !important;
-  background-size:cover !important;
+  background-size:100% auto !important;
   background-repeat:no-repeat !important;
   background-color:#050505 !important;
 }
 @media(max-width:800px){
   .page-shell .page-hero.reviews-hero.media-hero{
     background-position:center center !important;
-    background-size:cover !important;
+    background-size:100% auto !important;
   }
 }
