@@ -1738,3 +1738,17 @@ main > h1{
   width:166px !important;
   height:78px !important;
 }
+
+/* Home page: match the Call Us header control to the Company page sizing */
+.page-home .approved-home-header .header-call{
+  font-size:12px !important;
+  padding:10px 14px !important;
+  min-width:0 !important;
+  width:auto !important;
+  height:auto !important;
+  border-radius:30px !important;
+  gap:8px !important;
+}
+.page-home .approved-home-header .header-call span{
+  display:inline !important;
+}
