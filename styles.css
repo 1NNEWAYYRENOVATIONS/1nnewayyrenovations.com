@@ -2644,3 +2644,18 @@ main > h1{
     background-size:auto 100% !important;
   }
 }
+
+
+/* Reviews hero: zoom the complete approved artwork out within the existing hero frame */
+.page-shell .page-hero.reviews-hero.media-hero{
+  background-size:85% auto !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+  background-color:#050505 !important;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.reviews-hero.media-hero{
+    background-size:auto 100% !important;
+    background-position:center center !important;
+  }
+}
