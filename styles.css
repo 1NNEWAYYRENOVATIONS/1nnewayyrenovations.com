@@ -2594,8 +2594,14 @@ main > h1{
 }
 
 
-/* REVISION 3 CORRECTION: show more of the overall Reviews hero image */
+/* REVISION 3: zoom out so more of the full Reviews hero image is visible */
 .page-shell .page-hero.reviews-hero.media-hero{
   background-position:center center !important;
-  background-size:cover !important;
+  background-size:auto 100% !important;
+  background-color:#050505 !important;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.reviews-hero.media-hero{
+    background-size:auto 100% !important;
+  }
 }
