@@ -1928,3 +1928,40 @@ main > h1{
   .services-mock-hero h1{font-size:clamp(32px,7.8vw,46px) !important;line-height:.96 !important}
   .services-mock-hero p{font-size:14px !important}
 }
+
+/* Reference-image typography correction: clearly reduce both oversized hero headlines */
+.service-areas-hero-copy h1{
+  font-size:clamp(38px,3.7vw,52px) !important;
+  line-height:.98 !important;
+  letter-spacing:-.035em !important;
+}
+.service-areas-eyebrow{
+  font-size:16px !important;
+  letter-spacing:.32em !important;
+  margin-bottom:16px !important;
+}
+.service-areas-hero-copy p{
+  font-size:clamp(14px,1.55vw,19px) !important;
+  line-height:1.3 !important;
+}
+.services-mock-hero h1{
+  font-size:clamp(36px,3.9vw,52px) !important;
+  line-height:.96 !important;
+  letter-spacing:-.04em !important;
+}
+.services-mock-eyebrow{
+  font-size:16px !important;
+  letter-spacing:.32em !important;
+}
+.services-mock-hero p{
+  font-size:15px !important;
+  line-height:1.35 !important;
+}
+@media(max-width:720px){
+  .service-areas-hero-copy h1{font-size:clamp(30px,7vw,42px) !important}
+  .service-areas-eyebrow{font-size:12px !important}
+  .service-areas-hero-copy p{font-size:14px !important}
+  .services-mock-hero h1{font-size:clamp(30px,7vw,42px) !important}
+  .services-mock-eyebrow{font-size:12px !important}
+  .services-mock-hero p{font-size:13px !important}
+}
