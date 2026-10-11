@@ -2584,7 +2584,7 @@ main > h1{
 /* REVISION 1 CORRECTION: increase Blogs hero crop so horizontal repositioning is visibly effective */
 .page-shell .page-hero.blog-hero.media-hero{
   background-position:right center !important;
-  background-size:118% auto !important;
+  background-size:124% auto !important;
 }
 @media(max-width:800px){
   .page-shell .page-hero.blog-hero.media-hero{
