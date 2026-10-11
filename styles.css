@@ -1870,3 +1870,9 @@ main > h1{
     font-size:9px !important;
   }
 }
+
+/* Home page: slightly enlarge the header logo without changing header height */
+.page-home .approved-home-header .brand img{
+  width:176px !important;
+  height:82px !important;
+}
