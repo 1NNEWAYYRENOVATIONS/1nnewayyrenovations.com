@@ -2592,3 +2592,9 @@ main > h1{
     background-size:cover !important;
   }
 }
+
+
+/* REVISION 2: shift only the Reviews hero image slightly right to reveal more of its middle */
+.page-shell .page-hero.reviews-hero.media-hero{
+  background-position:58% center !important;
+}
