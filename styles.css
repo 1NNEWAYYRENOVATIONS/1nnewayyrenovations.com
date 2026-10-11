@@ -2115,3 +2115,23 @@ main > h1{
   background-position:center center !important;
   background-size:cover !important;
 }
+
+
+/* Home header logo: match the standard desktop page logo size and left alignment */
+@media (min-width:801px){
+  .page-home .approved-home-header .brand{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+  .page-home .approved-home-header .brand img{
+    display:block !important;
+    width:210px !important;
+    height:76px !important;
+    object-fit:contain !important;
+    object-position:left center !important;
+    margin:0 !important;
+  }
+}
