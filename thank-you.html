@@ -9,6 +9,15 @@
 <link rel="stylesheet" href="styles.css?v=thank-you-shared-site-chrome-20261011">
 <style>
 .thank-you-page{background:#050505;color:#fff}
+.thank-you-footer{background:#000;border-top:5px solid #d4af37;min-height:260px;padding:14px 20px 22px;text-align:center;box-sizing:border-box;color:#fff}
+.thank-you-footer-brand{display:block;width:min(300px,70vw);margin:0 auto}
+.thank-you-footer-brand img{display:block;width:100%;height:auto;object-fit:contain}
+.thank-you-footer-tagline{font-size:17px;font-weight:700;margin:0 auto 16px}
+.thank-you-footer-copyright{font-size:16px;margin:0 auto 10px}
+.thank-you-footer-links{display:flex;justify-content:center;align-items:center;gap:22px;font-size:17px}
+.thank-you-footer-links a{color:#f4c51f;text-decoration:underline}
+.thank-you-footer-links span[aria-hidden="true"]{color:#fff}
+@media(max-width:760px){.thank-you-footer{min-height:0;padding:16px 12px}.thank-you-footer-brand{width:min(230px,70vw)}.thank-you-footer-tagline{font-size:13px}.thank-you-footer-copyright{font-size:11px}.thank-you-footer-links{gap:12px;font-size:13px}}
 .thank-you-main{min-height:580px;display:flex;align-items:center;justify-content:center;padding:44px 24px;box-sizing:border-box;background:linear-gradient(90deg,rgba(0,0,0,.62),rgba(0,0,0,.46)),url('1NNEWAYY_Request_Onsite_Estimate_Hero_Optimized.webp') center/cover no-repeat;border-bottom:5px solid #d4af37}
 .thank-you-wrap{width:min(770px,100%);text-align:center;border:2px solid #e5b500;border-radius:24px;padding:24px 44px 36px;box-sizing:border-box;background:rgba(0,0,0,.88);box-shadow:0 0 20px rgba(212,175,55,.14)}
 .thank-you-kicker{font-size:20px;font-weight:800;letter-spacing:.27em;color:#f5d34b;text-transform:uppercase}
@@ -33,7 +42,7 @@
       <a href="our-work.html">Our Work</a>
       <a href="masterplan.html">MasterPlan</a>
       <a href="reviews.html">Reviews</a>
-      <a href="estimate.html">Request Estimate</a>
+      <a class="active" href="estimate.html">Request Estimate</a>
       <a href="blog.html">Blogs</a>
       <a href="faq.html">F&Q</a>
     </nav>
@@ -54,23 +63,15 @@
     </div>
   </section>
 </main>
-<footer class="site-footer mockup-footer">
-  <div class="mockup-footer-main">
-    <div class="mockup-footer-brand">
-      <a href="index.html" aria-label="1NNEWAYY RENOVATIONS LLC home">
-        <img src="logo.png" alt="1NNEWAYY RENOVATIONS LLC" class="mockup-footer-logo">
-      </a>
-    </div>
-    <div class="mockup-footer-divider" aria-hidden="true"></div>
-    <div class="mockup-footer-action">
-      <a class="mockup-footer-estimate" href="estimate.html">Request Onsite Estimate</a>
-    </div>
-    <div class="mockup-footer-divider" aria-hidden="true"></div>
-    <div class="mockup-footer-action">
-      <a class="mockup-footer-call" href="tel:+18889138677"><span class="mockup-footer-phone" aria-hidden="true">☎</span><span>Call US</span></a>
-    </div>
+<footer class="thank-you-footer">
+  <a class="thank-you-footer-brand" href="index.html" aria-label="1NNEWAYY RENOVATIONS LLC home"><img src="logo.png" alt="1NNEWAYY RENOVATIONS LLC"></a>
+  <div class="thank-you-footer-tagline">There's only one way... and that's the right way.</div>
+  <div class="thank-you-footer-copyright">© 2025 1NNEWAYY RENOVATIONS LLC. All Rights Reserved.</div>
+  <div class="thank-you-footer-links">
+    <a href="estimate.html">Request Onsite Estimate</a>
+    <span aria-hidden="true">|</span>
+    <a href="tel:+18889138677"><span aria-hidden="true">☎</span> Call Us</a>
   </div>
-  <div class="mockup-footer-copyright">© 2025 1NNEWAYY RENOVATIONS LLC. All Rights Reserved.</div>
 </footer>
 <script src="script.js"></script>
 </body>
