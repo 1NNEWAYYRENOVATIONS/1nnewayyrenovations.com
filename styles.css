@@ -2580,3 +2580,15 @@ main > h1{
 .page-shell .page-hero.blog-hero.media-hero{
   background-position:68% center !important;
 }
+
+/* REVISION 1 CORRECTION: increase Blogs hero crop so horizontal repositioning is visibly effective */
+.page-shell .page-hero.blog-hero.media-hero{
+  background-position:right center !important;
+  background-size:112% auto !important;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.blog-hero.media-hero{
+    background-position:68% center !important;
+    background-size:cover !important;
+  }
+}
