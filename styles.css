@@ -1646,7 +1646,7 @@ main > h1{
 
 /* Reviews hero: use the newly uploaded alternate optimized review image */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-image:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 34%,rgba(0,0,0,.14) 72%),url('1NNEWAYY_Reviews_Hero_Alternate_Optimized.webp') !important;
+  background-image:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.72) 34%,rgba(0,0,0,.14) 72%),url('1NNEWAYY_Reviews_Hero_Cropped.png') !important;
   background-position:center center !important;
   background-size:cover !important;
   background-repeat:no-repeat !important;
@@ -2594,14 +2594,8 @@ main > h1{
 }
 
 
-/* REVISION 2 MICRO-ADJUSTMENT: move Reviews hero framing slightly farther right */
+/* REVISION 3: use the approved cropped Reviews hero image directly */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-position:18% center !important;
-  background-size:115% auto !important;
-}
-@media(max-width:800px){
-  .page-shell .page-hero.reviews-hero.media-hero{
-    background-position:18% center !important;
-    background-size:cover !important;
-  }
+  background-position:center center !important;
+  background-size:cover !important;
 }
