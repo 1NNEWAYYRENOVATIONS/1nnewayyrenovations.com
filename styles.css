@@ -2594,7 +2594,14 @@ main > h1{
 }
 
 
-/* REVISION 2: shift only the Reviews hero image slightly right to reveal more of its middle */
+/* REVISION 2 CORRECTION: enlarge and move only the Reviews hero image right so the crop is visibly different */
 .page-shell .page-hero.reviews-hero.media-hero{
-  background-position:58% center !important;
+  background-position:42% center !important;
+  background-size:115% auto !important;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.reviews-hero.media-hero{
+    background-position:42% center !important;
+    background-size:cover !important;
+  }
 }
