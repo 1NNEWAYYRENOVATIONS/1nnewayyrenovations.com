@@ -1752,3 +1752,21 @@ main > h1{
 .page-home .approved-home-header .header-call span{
   display:inline !important;
 }
+
+/* Home page: match the Call Us button to the supplied Company-header screenshot */
+.page-home .approved-home-header .header-call{
+  box-sizing:border-box !important;
+  width:290px !important;
+  min-width:290px !important;
+  height:80px !important;
+  padding:0 24px !important;
+  font-size:26px !important;
+  line-height:1 !important;
+  gap:12px !important;
+  justify-content:center !important;
+  border-radius:42px !important;
+  white-space:nowrap !important;
+}
+.page-home .approved-home-header .header-call span{
+  display:inline !important;
+}
