@@ -2552,3 +2552,21 @@ main > h1{
     font-size:9px !important;
   }
 }
+
+/* REVISION 1: vertically center Home hero copy without changing its typography or horizontal alignment */
+.page-home .approved-home-hero{
+  align-items:center !important;
+}
+.page-home .approved-home-hero .approved-home-copy{
+  padding-top:25px !important;
+  padding-bottom:25px !important;
+}
+@media(max-width:800px){
+  .page-home .approved-home-hero{
+    align-items:center !important;
+  }
+  .page-home .approved-home-hero .approved-home-copy{
+    padding-top:18px !important;
+    padding-bottom:18px !important;
+  }
+}
