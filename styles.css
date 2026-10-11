@@ -2659,3 +2659,18 @@ main > h1{
     background-position:center center !important;
   }
 }
+
+
+/* Reviews hero: stronger desktop zoom-out requested */
+.page-shell .page-hero.reviews-hero.media-hero{
+  background-size:70% auto !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+  background-color:#050505 !important;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.reviews-hero.media-hero{
+    background-size:auto 100% !important;
+    background-position:center center !important;
+  }
+}
