@@ -2608,3 +2608,25 @@ main > h1{
     background-size:100% auto !important;
   }
 }
+
+
+/* Reviews hero final correction: preserve the approved 2048:692 composition without vertical cropping */
+.page-shell .page-hero.reviews-hero.media-hero{
+  height:auto !important;
+  min-height:0 !important;
+  aspect-ratio:2048 / 692 !important;
+  background-image:url('1NNEWAYY_Reviews_Hero_Cropped.png') !important;
+  background-position:center center !important;
+  background-size:100% 100% !important;
+  background-repeat:no-repeat !important;
+  overflow:hidden;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.reviews-hero.media-hero{
+    aspect-ratio:auto !important;
+    min-height:420px !important;
+    height:auto !important;
+    background-position:center center !important;
+    background-size:auto 100% !important;
+  }
+}
