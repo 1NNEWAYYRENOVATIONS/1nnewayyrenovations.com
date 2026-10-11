@@ -2107,3 +2107,11 @@ main > h1{
   background-position:center center !important;
   background-size:cover !important;
 }
+
+/* F&Q page: replace the previous hero with the approved construction-exterior image */
+.page-shell .page-hero.faq-hero.media-hero{
+  --hero:url('1NNEWAYY_Construction_Exterior_Hero_Optimized.webp') !important;
+  background-image:var(--hero) !important;
+  background-position:center center !important;
+  background-size:cover !important;
+}
