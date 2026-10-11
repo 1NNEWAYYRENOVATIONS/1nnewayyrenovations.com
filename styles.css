@@ -2689,3 +2689,19 @@ main > h1{
     background-position:center center !important;
   }
 }
+
+
+/* Reviews hero: restore the approved full-width reference composition */
+.page-shell .page-hero.reviews-hero.media-hero{
+  background-image:url('1NNEWAYY_Reviews_Hero_Cropped.png') !important;
+  background-size:100% 100% !important;
+  background-position:center center !important;
+  background-repeat:no-repeat !important;
+  background-color:#050505 !important;
+}
+@media(max-width:800px){
+  .page-shell .page-hero.reviews-hero.media-hero{
+    background-size:auto 100% !important;
+    background-position:center center !important;
+  }
+}
