@@ -2091,3 +2091,11 @@ main > h1{
   }
   .company-page .company-mockup-hero p{font-size:13px !important}
 }
+
+/* Blogs page: use the newly uploaded optimized hero image */
+.page-shell .page-hero.blog-hero.media-hero{
+  --hero:url('1NNEWAYY_Blogs_Hero_Optimized.webp') !important;
+  background-image:var(--hero) !important;
+  background-position:center center !important;
+  background-size:cover !important;
+}
