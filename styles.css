@@ -1965,3 +1965,26 @@ main > h1{
   .services-mock-eyebrow{font-size:12px !important}
   .services-mock-hero p{font-size:13px !important}
 }
+
+/* Final high-specificity Services hero typography override */
+.services-mockup-page .services-mock-hero-copy .services-mock-eyebrow{
+  font-size:16px !important;
+  letter-spacing:.32em !important;
+  line-height:1.2 !important;
+}
+.services-mockup-page .services-mock-hero-copy h1#services-title{
+  font-size:clamp(36px,3.9vw,52px) !important;
+  line-height:.96 !important;
+  letter-spacing:-.04em !important;
+  max-width:720px !important;
+}
+.services-mockup-page .services-mock-hero-copy p{
+  font-size:15px !important;
+  line-height:1.35 !important;
+  max-width:430px !important;
+}
+@media(max-width:720px){
+  .services-mockup-page .services-mock-hero-copy .services-mock-eyebrow{font-size:12px !important}
+  .services-mockup-page .services-mock-hero-copy h1#services-title{font-size:clamp(30px,7vw,42px) !important}
+  .services-mockup-page .services-mock-hero-copy p{font-size:13px !important}
+}
