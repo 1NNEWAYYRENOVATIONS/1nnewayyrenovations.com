@@ -2744,3 +2744,20 @@ main > h1{
     transform:translateY(-34px);
   }
 }
+
+
+/* REVIEWS PAGE ONLY — center the review submission form within its existing section. */
+.page-reviews .review-form{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  box-sizing:border-box;
+}
+.page-reviews .review-form > input,
+.page-reviews .review-form > textarea,
+.page-reviews .review-form > select,
+.page-reviews .review-form > button,
+.page-reviews .review-form > a{
+  box-sizing:border-box;
+  max-width:100%;
+}
