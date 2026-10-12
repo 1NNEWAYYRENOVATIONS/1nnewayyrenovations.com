@@ -2705,3 +2705,25 @@ main > h1{
     background-position:center center !important;
   }
 }
+
+
+/* FOUNDATION LOCK — center footer logo within its existing grid section site-wide.
+   Preserve grid dimensions, logo size, alignment of other footer elements, and treatments. */
+.site-footer.mockup-footer .mockup-footer-brand{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  min-width:0;
+}
+.site-footer.mockup-footer .mockup-footer-brand > a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+}
+.site-footer.mockup-footer .mockup-footer-logo{
+  display:block;
+  margin-left:auto !important;
+  margin-right:auto !important;
+}
