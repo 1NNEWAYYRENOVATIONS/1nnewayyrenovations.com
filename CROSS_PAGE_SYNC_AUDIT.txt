@@ -10,3 +10,6 @@ PASS: Exactly 11 navigation tabs on each primary page.
 PASS: Dedicated call-us.html has no styles.css dependency.
 
 Scope: Surgical header synchronization plus previously corrected F&Q dropdown and standalone Call Us pages.
+
+PASS: Shared footer logo is centered within its designated brand section across all pages using .site-footer.mockup-footer.
+PASS: Footer centering is implemented through shared styles.css without changing footer grid dimensions or other footer treatments.
