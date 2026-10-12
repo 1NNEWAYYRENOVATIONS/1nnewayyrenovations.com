@@ -19,3 +19,11 @@ LOCKED DESIGN REQUIREMENTS
 IMPLEMENTATION RECORD
 - Latest approved proportional sizing commit: 237f9f27b69c38a2afca6f60aa5eb286b8c745b1
 - Shared footer implementation commit: 6093c7aeca78834f5edf2d48426ebc28aa26b881
+
+
+FOOTER LOGO CENTERING — FOUNDATION LOCK UPDATE (2026-10-12)
+- Applied site-wide through the shared styles.css footer classes.
+- Footer logo is centered horizontally and vertically within its existing designated brand/grid section.
+- Existing grid dimensions, logo sizing, gold treatments, dividers, estimate button, Call Us action, copyright placement, and responsive footer layout are preserved.
+- Applies to all pages using .site-footer.mockup-footer, including thank-you.html.
+- CSS commit: 2df73ca94d4e1a0c328cd449ba29cdf9ef1f579c
