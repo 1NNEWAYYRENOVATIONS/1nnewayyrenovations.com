@@ -2933,7 +2933,7 @@ main > h1{
   }
 }
 
-/* REVIEWS PAGE — center the complete form and size Submit Review to the section heading scale. */
+/* REVIEWS PAGE — match Submit Review to the compact Leave a Review call-to-action. */
 .page-reviews .review-form-wrap{
   width:min(72vw, 1400px) !important;
   margin-left:auto !important;
@@ -2949,12 +2949,15 @@ main > h1{
   justify-items:stretch !important;
 }
 .page-reviews #reviewForm > button.btn-gold{
-  width:100% !important;
+  justify-self:center !important;
+  width:auto !important;
+  min-width:0 !important;
   max-width:100% !important;
-  min-height:42px !important;
-  height:42px !important;
-  padding:8px 16px !important;
-  font-size:15px !important;
+  min-height:44px !important;
+  height:44px !important;
+  margin:0 auto !important;
+  padding:12px 22px !important;
+  font-size:16px !important;
   line-height:1.2 !important;
   border-radius:24px !important;
   box-sizing:border-box !important;
@@ -2964,8 +2967,9 @@ main > h1{
     width:100% !important;
   }
   .page-reviews #reviewForm > button.btn-gold{
-    min-height:40px !important;
-    height:40px !important;
-    font-size:14px !important;
+    min-height:44px !important;
+    height:44px !important;
+    font-size:15px !important;
+    padding:11px 20px !important;
   }
 }
