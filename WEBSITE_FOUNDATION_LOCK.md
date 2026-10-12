@@ -27,3 +27,15 @@ FOOTER LOGO CENTERING — FOUNDATION LOCK UPDATE (2026-10-12)
 - Existing grid dimensions, logo sizing, gold treatments, dividers, estimate button, Call Us action, copyright placement, and responsive footer layout are preserved.
 - Applies to all pages using .site-footer.mockup-footer, including thank-you.html.
 - CSS commit: 2df73ca94d4e1a0c328cd449ba29cdf9ef1f579c
+
+APPROVED SHARED FOOTER — FOUNDATION LOCK (2026-10-12)
+- The supplied footer reference image is the authoritative visual standard for the shared website footer.
+- Apply the same footer consistently to every primary website page, including thank-you.html, through the shared .site-footer.mockup-footer markup and styles.
+- Layout, left to right: brand logo centered horizontally and vertically within its designated left grid section; gold vertical divider; centered gold-gradient “Request Onsite Estimate” button; gold vertical divider; circular gold phone icon and “Call US” action.
+- Place the centered copyright line beneath the main footer row: “© 2025 1NNEWAYY RENOVATIONS LLC. All Rights Reserved.”
+- Preserve the black background, thin metallic-gold top border, existing gold tones, typography, button treatment, icon styling, dividers, row proportions, and established footer sizing.
+- Center the logo only within its existing designated section. Do not shift the other columns or change the grid, logo dimensions, button placement, call placement, or copyright alignment as part of this logo-centering revision.
+- Preserve responsive behavior at tablet and mobile breakpoints.
+- This footer is now a locked foundational component. Any future site-wide change to its visual treatment, dimensions, order, spacing, or behavior requires explicit authorization.
+- Source of truth: styles.css selectors .site-footer.mockup-footer and .mockup-footer-*; all pages using this shared footer must remain synchronized.
+
