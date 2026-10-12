@@ -3076,3 +3076,24 @@ main > h1{
     padding:8px 18px !important;
   }
 }
+
+/* MOBILE ONLY — Call Us phone-symbol colors; desktop styling remains untouched. */
+@media (max-width: 800px) {
+  .site-header .header-call {
+    color: #000 !important;
+    font-size: 0 !important;
+  }
+  .site-header .header-call::before {
+    content: "☎";
+    display: inline-block;
+    color: #000 !important;
+    font-size: 18px;
+    line-height: 1;
+    font-variant-emoji: text;
+  }
+  .site-footer.mockup-footer .mockup-footer-phone {
+    color: #D4AF37 !important;
+    border-color: #D4AF37 !important;
+    font-variant-emoji: text;
+  }
+}
