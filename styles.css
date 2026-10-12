@@ -3077,13 +3077,19 @@ main > h1{
   }
 }
 
-/* MOBILE ONLY — preserve the existing phone glyph and apply color only. */
-@media (max-width: 800px) {
-  .site-header .header-call {
-    color: #000 !important;
+
+/* MOBILE PHONE ICON COLOR FIX — text presentation prevents red emoji rendering. */
+@media (max-width:800px){
+  .site-header .header-call{
+    color:#000 !important;
   }
-  .site-footer.mockup-footer .mockup-footer-phone {
-    color: #D4AF37 !important;
-    border-color: #D4AF37 !important;
+  .site-header .header-call,
+  .site-header .header-call::first-letter{
+    font-variant-emoji:text !important;
+  }
+  .site-footer.mockup-footer .mockup-footer-phone{
+    color:#D4AF37 !important;
+    border-color:#D4AF37 !important;
+    font-variant-emoji:text !important;
   }
 }
