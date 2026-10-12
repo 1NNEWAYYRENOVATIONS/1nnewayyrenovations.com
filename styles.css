@@ -2761,3 +2761,13 @@ main > h1{
   box-sizing:border-box;
   max-width:100%;
 }
+
+
+/* REVIEWS PAGE ONLY — center the Leave a Review heading and five-star rating row. */
+.page-reviews .review-form-wrap > .section-kicker{
+  text-align:center;
+}
+.page-reviews .review-form .stars-select{
+  justify-content:center;
+  width:100%;
+}
