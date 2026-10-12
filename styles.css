@@ -2735,13 +2735,12 @@ main > h1{
 }
 
 
-/* HOME PAGE — move the approved hero content upward so more is visible on initial load.
-   Position-only adjustment; preserve typography, spacing, dimensions, background, and alignment. */
+/* HOME PAGE — slight additional upward adjustment to approved hero content only. */
 .page-home .approved-home-hero .approved-home-copy{
-  transform:translateY(-42px);
+  transform:translateY(-54px);
 }
 @media(max-width:800px){
   .page-home .approved-home-hero .approved-home-copy{
-    transform:translateY(-26px);
+    transform:translateY(-34px);
   }
 }
