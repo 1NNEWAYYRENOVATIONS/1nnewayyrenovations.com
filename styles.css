@@ -3102,7 +3102,9 @@ main > h1{
   body{font-size:15px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   img,video,iframe,svg{max-width:100%}
   .site-header,.site-header.approved-home-header{
-    position:relative !important;
+    position:sticky !important;
+    top:0 !important;
+    z-index:100 !important;
     width:100% !important;
     min-height:82px !important;
     height:auto !important;
@@ -3189,7 +3191,6 @@ main > h1{
   }
   .site-header .header-call span,
   .site-header.approved-home-header .header-call span{display:none !important}
-  .page-hero{min-height:420px}
   .page-hero-inner{width:100%;max-width:100%;padding:44px 20px;box-sizing:border-box}
   .hero-title{font-size:clamp(38px,8.5vw,60px);line-height:.98;overflow-wrap:anywhere}
   .hero-lead{font-size:16px;line-height:1.55}
@@ -3256,7 +3257,6 @@ main > h1{
     padding:0 7px !important;
     font-size:9px !important;
   }
-  .page-hero{min-height:390px}
   .page-hero-inner{padding:36px 16px}
   .hero-title{font-size:clamp(34px,9vw,47px)}
   .hero-lead{font-size:15px}
