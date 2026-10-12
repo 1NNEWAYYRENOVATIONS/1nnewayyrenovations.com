@@ -2733,3 +2733,15 @@ main > h1{
 .estimate-grid > .project-form{
   margin-top:12px;
 }
+
+
+/* HOME PAGE — move the approved hero content upward so more is visible on initial load.
+   Position-only adjustment; preserve typography, spacing, dimensions, background, and alignment. */
+.page-home .approved-home-hero .approved-home-copy{
+  transform:translateY(-42px);
+}
+@media(max-width:800px){
+  .page-home .approved-home-hero .approved-home-copy{
+    transform:translateY(-26px);
+  }
+}
