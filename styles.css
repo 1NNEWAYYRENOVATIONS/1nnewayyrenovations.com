@@ -3516,3 +3516,55 @@ main > h1{
   body.page-home .approved-icon{font-size:30px !important;flex:0 0 36px !important}
   body.page-home .approved-home-feature strong{font-size:15px !important;line-height:1.2 !important}
 }
+
+
+/* TARGETED FOOTER FIX — class-qualified specificity beats legacy page-specific !important rules. */
+@media screen and (max-width:800px){
+  body[class] footer.site-footer.mockup-footer{
+    padding:8px 12px 7px !important;
+    min-height:0 !important;
+    height:auto !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-main{
+    gap:4px !important;
+    min-height:0 !important;
+    height:auto !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-logo{
+    width:112px !important;
+    max-width:48vw !important;
+    max-height:54px !important;
+    height:auto !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-divider{
+    width:70% !important;
+    height:1px !important;
+    min-height:1px !important;
+    flex:0 0 1px !important;
+    margin:0 auto !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-estimate{
+    width:100% !important;
+    min-height:38px !important;
+    height:auto !important;
+    padding:7px 10px !important;
+    font-size:13px !important;
+    line-height:1.15 !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-call{
+    font-size:15px !important;
+    gap:6px !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-phone{
+    width:30px !important;
+    min-width:30px !important;
+    height:30px !important;
+    min-height:30px !important;
+    font-size:16px !important;
+  }
+  body[class] footer.site-footer.mockup-footer .mockup-footer-copyright{
+    margin-top:3px !important;
+    font-size:9px !important;
+    line-height:1.2 !important;
+  }
+}
