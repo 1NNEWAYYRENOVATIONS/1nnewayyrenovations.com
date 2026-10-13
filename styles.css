@@ -4013,3 +4013,84 @@ main > h1{
     line-height:1.25 !important;
   }
 }
+
+
+/* MOBILE FINAL OVERRIDE — Home uses the Services header treatment; compact footer visibly on every page. */
+@media screen and (max-width:800px){
+  body.page-home .site-header.approved-home-header .header-inner{
+    grid-template-columns:92px minmax(0,1fr) 36px !important;
+    grid-template-rows:50px 34px !important;
+    gap:3px 7px !important;
+    padding:5px 8px 7px !important;
+  }
+  body.page-home .site-header.approved-home-header .nav a{
+    font-size:10px !important;
+    padding:7px 8px !important;
+    line-height:1.2 !important;
+  }
+  body.page-home .site-header.approved-home-header .header-call{
+    width:34px !important;
+    min-width:34px !important;
+    max-width:34px !important;
+    height:34px !important;
+    min-height:34px !important;
+    max-height:34px !important;
+    border-radius:30px !important;
+  }
+  body.page-home footer.site-footer.mockup-footer,
+  body.services-mockup-page footer.site-footer.mockup-footer,
+  body footer.site-footer.mockup-footer{
+    padding:6px 10px 6px !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-main,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-main,
+  body footer.site-footer.mockup-footer .mockup-footer-main{
+    gap:3px !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-logo,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-logo,
+  body footer.site-footer.mockup-footer .mockup-footer-logo{
+    width:96px !important;
+    max-width:48vw !important;
+    max-height:52px !important;
+    height:auto !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-divider,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-divider,
+  body footer.site-footer.mockup-footer .mockup-footer-divider{
+    width:68% !important;
+    height:1px !important;
+    min-height:1px !important;
+    flex-basis:1px !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-estimate,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-estimate,
+  body footer.site-footer.mockup-footer .mockup-footer-estimate{
+    min-height:34px !important;
+    padding:6px 9px !important;
+    font-size:12px !important;
+    line-height:1.15 !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-call,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-call,
+  body footer.site-footer.mockup-footer .mockup-footer-call{
+    font-size:14px !important;
+    gap:5px !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-phone,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-phone,
+  body footer.site-footer.mockup-footer .mockup-footer-phone{
+    width:27px !important;
+    min-width:27px !important;
+    height:27px !important;
+    min-height:27px !important;
+    font-size:15px !important;
+  }
+  body.page-home footer.site-footer.mockup-footer .mockup-footer-copyright,
+  body.services-mockup-page footer.site-footer.mockup-footer .mockup-footer-copyright,
+  body footer.site-footer.mockup-footer .mockup-footer-copyright{
+    margin-top:2px !important;
+    font-size:9px !important;
+    line-height:1.2 !important;
+  }
+}
