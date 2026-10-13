@@ -39,3 +39,22 @@ APPROVED SHARED FOOTER — FOUNDATION LOCK (2026-10-12)
 - This footer is now a locked foundational component. Any future site-wide change to its visual treatment, dimensions, order, spacing, or behavior requires explicit authorization.
 - Source of truth: styles.css selectors .site-footer.mockup-footer and .mockup-footer-*; all pages using this shared footer must remain synchronized.
 
+BLOG ARTICLE PAGES — SHARED FOUNDATION LOCK (2026-10-13)
+- The three approved Blog article pages are now synchronized to one shared stylesheet: `/blog-article-foundation.css`.
+- Canonical approved article pages:
+  - `blog/articles/drywall-repair-vs-replacement/index.html`
+  - `blog/articles/lvp-flooring-riverview-fl/index.html`
+  - `blog/articles/lvp-vs-carpet-florida-home/index.html`
+- The shared stylesheet contains the exact common article-page styling, including black/metallic-gold visual treatment, article typography and section rules, responsive breakpoints, header layout, and the approved shared footer treatment.
+- Do not duplicate the article CSS inline in new article pages. Link to `/blog-article-foundation.css` so future foundation corrections propagate to every article using it.
+- Reusable authoring template: `BLOG_ARTICLE_TEMPLATE.html.txt`. This is a source template, not a live page. Replace every `{{PLACEHOLDER}}`, write original article content, and publish the finished article as `blog/articles/<article-slug>/index.html`.
+- Locked header navigation for article pages:
+  - Home: `/`
+  - Blog: `/blog.html`
+  - Request Estimate: `/estimate.html` (must go directly to the dedicated Request Estimate page, never `/#estimate`)
+  - Call US: `tel:+18889138677`
+- Locked footer: retain the exact `.site-footer.mockup-footer` markup and class names from the template; footer logo `/logo.png`; Request Onsite Estimate `/estimate.html`; Call US `tel:+18889138677`; copyright text exactly `© 2025 1NNEWAYY RENOVATIONS LLC. All Rights Reserved.`
+- Preserve article-specific canonical URL, Open Graph and Twitter metadata, Article and BreadcrumbList structured data, GA4 measurement ID `G-KPD96277PQ`, and article-specific text/category. Ensure all placeholders are replaced before publishing.
+- Future article pages must use the shared foundation and reusable template. Any intentional visual or navigation exception requires explicit authorization.
+- Latest shared stylesheet commit: `17d40bff315cb059ac0938f628a1c30c7ca33f61`.
+- Latest shared-template commit: `3e364e57f37945b042bf4b68cc254594ebafb3ea`.
