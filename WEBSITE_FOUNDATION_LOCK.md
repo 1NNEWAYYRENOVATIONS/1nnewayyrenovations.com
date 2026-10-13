@@ -50,7 +50,7 @@ BLOG ARTICLE PAGES — SHARED FOUNDATION LOCK (2026-10-13)
 - Reusable authoring template: `BLOG_ARTICLE_TEMPLATE.html.txt`. This is a source template, not a live page. Replace every `{{PLACEHOLDER}}`, write original article content, and publish the finished article as `blog/articles/<article-slug>/index.html`.
 - Locked header navigation for article pages:
   - Home: `/`
-  - Blog: `/blog.html`
+  - Blogs: `/blog.html`
   - Request Estimate: `/estimate.html` (must go directly to the dedicated Request Estimate page, never `/#estimate`)
   - Call US: `tel:+18889138677`
 - Locked footer: retain the exact `.site-footer.mockup-footer` markup and class names from the template; footer logo `/logo.png`; Request Onsite Estimate `/estimate.html`; Call US `tel:+18889138677`; copyright text exactly `© 2025 1NNEWAYY RENOVATIONS LLC. All Rights Reserved.`
