@@ -3957,3 +3957,59 @@ main > h1{
     box-sizing:border-box !important;
   }
 }
+
+
+/* MOBILE VISUAL ACCEPTANCE FIX — match Home header to Services and visibly compact footer. */
+@media screen and (max-width:800px){
+  body.page-home .site-header.approved-home-header .nav a{
+    font-size:11px !important;
+    padding:8px 9px !important;
+    line-height:1.2 !important;
+  }
+  body.page-home .site-header.approved-home-header .header-call{
+    width:38px !important;
+    min-width:38px !important;
+    max-width:38px !important;
+    height:38px !important;
+    min-height:38px !important;
+    max-height:38px !important;
+    border-radius:28px !important;
+  }
+  body footer.site-footer.mockup-footer{
+    padding:8px 12px 7px !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-main{
+    gap:4px !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-logo{
+    width:112px !important;
+    max-width:52vw !important;
+    max-height:62px !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-divider{
+    width:72% !important;
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-estimate{
+    min-height:38px !important;
+    padding:7px 10px !important;
+    font-size:13px !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-call{
+    font-size:15px !important;
+    gap:6px !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-phone{
+    width:30px !important;
+    min-width:30px !important;
+    height:30px !important;
+    min-height:30px !important;
+    font-size:16px !important;
+  }
+  body footer.site-footer.mockup-footer .mockup-footer-copyright{
+    margin-top:3px !important;
+    font-size:9px !important;
+    line-height:1.25 !important;
+  }
+}
