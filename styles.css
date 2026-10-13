@@ -3267,3 +3267,147 @@ main > h1{
   .home-hero-copy h1{font-size:clamp(38px,10vw,52px)}
   .site-footer,.site-footer.mockup-footer{padding:16px 10px 10px}
 }
+
+
+/* MOBILE HOME PAGE — explicit fixes for clipped navigation and oversized sections.
+   These rules intentionally target the approved home-page components only. */
+@media (max-width:520px){
+  .site-header.approved-home-header{
+    min-height:0 !important;
+  }
+  .site-header.approved-home-header .header-inner{
+    display:grid !important;
+    grid-template-columns:90px minmax(0,1fr) 34px !important;
+    grid-template-rows:54px 34px !important;
+    gap:3px 6px !important;
+    min-height:0 !important;
+    padding:5px 8px 7px !important;
+    overflow:visible !important;
+  }
+  .site-header.approved-home-header .brand{
+    grid-column:1;
+    grid-row:1;
+  }
+  .site-header.approved-home-header .brand img{
+    width:90px !important;
+    height:48px !important;
+  }
+  .site-header.approved-home-header .header-call{
+    grid-column:3;
+    grid-row:1;
+    width:32px !important;
+    min-width:32px !important;
+    height:32px !important;
+    min-height:32px !important;
+    padding:0 !important;
+    background:transparent !important;
+    border:1px solid #D4AF37 !important;
+    border-radius:50% !important;
+    color:#D4AF37 !important;
+  }
+  .site-header.approved-home-header .nav{
+    grid-column:1 / -1;
+    grid-row:2;
+    width:100% !important;
+    min-width:0 !important;
+    padding:0 0 2px !important;
+    gap:4px !important;
+    overflow-x:auto !important;
+    overscroll-behavior-x:contain;
+  }
+  .site-header.approved-home-header .nav a{
+    font-size:10px !important;
+    padding:7px 8px !important;
+  }
+
+  .page-home .approved-home-hero{
+    min-height:650px !important;
+    height:auto !important;
+    align-items:center !important;
+    background-position:center center !important;
+  }
+  .page-home .approved-home-copy{
+    width:100% !important;
+    padding:34px 18px !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+  }
+  .page-home .approved-home-eyebrow{
+    font-size:12px !important;
+    letter-spacing:.22em !important;
+    margin-bottom:14px !important;
+  }
+  .page-home .approved-home-copy h1{
+    font-size:clamp(38px,10vw,48px) !important;
+    line-height:.95 !important;
+    letter-spacing:-.035em !important;
+  }
+  .page-home .approved-home-copy h1 strong{
+    font-size:.57em !important;
+    line-height:1.02 !important;
+    margin-top:12px !important;
+  }
+  .page-home .approved-home-rule{
+    width:82px !important;
+    height:4px !important;
+    margin:16px 0 12px !important;
+  }
+  .page-home .approved-home-tagline{
+    font-size:16px !important;
+    line-height:1.2 !important;
+    margin-bottom:14px !important;
+  }
+  .page-home .approved-home-description{
+    font-size:15px !important;
+    line-height:1.45 !important;
+  }
+  .page-home .approved-home-features{
+    grid-template-columns:minmax(0,1fr) !important;
+    min-height:0 !important;
+  }
+  .page-home .approved-home-feature{
+    min-height:0 !important;
+    padding:13px 14px !important;
+    gap:14px !important;
+    border-right:0 !important;
+    border-bottom:1px solid #D4AF37 !important;
+  }
+  .page-home .approved-home-feature:last-child{
+    border-bottom:0 !important;
+  }
+  .page-home .approved-icon{
+    font-size:30px !important;
+    flex:0 0 36px !important;
+  }
+  .page-home .approved-home-feature strong{
+    font-size:15px !important;
+    line-height:1.2 !important;
+  }
+  .page-home .site-footer.mockup-footer{
+    padding:14px 12px 9px !important;
+  }
+  .page-home .site-footer.mockup-footer .mockup-footer-main{
+    min-height:0 !important;
+    gap:8px !important;
+  }
+  .page-home .site-footer.mockup-footer .mockup-footer-logo{
+    width:150px !important;
+  }
+  .page-home .site-footer.mockup-footer .mockup-footer-divider{
+    height:1px !important;
+  }
+  .page-home .site-footer.mockup-footer .mockup-footer-estimate{
+    min-height:44px !important;
+    padding:9px 12px !important;
+    font-size:15px !important;
+  }
+  .page-home .site-footer.mockup-footer .mockup-footer-call{
+    font-size:17px !important;
+    gap:8px !important;
+  }
+  .page-home .site-footer.mockup-footer .mockup-footer-phone{
+    width:36px !important;
+    height:36px !important;
+    font-size:19px !important;
+  }
+}
