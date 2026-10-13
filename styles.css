@@ -3595,3 +3595,113 @@ main > h1{
   .page-home .approved-icon{font-size:30px !important;flex:0 0 36px !important}
   .page-home .approved-home-feature strong{font-size:15px !important;line-height:1.2 !important}
 }
+
+
+/* MOBILE FOOTER OVERRIDE — force compact, consistent layout across every page. */
+@media (max-width:520px){
+  footer.site-footer.mockup-footer{
+    display:block !important;
+    min-height:0 !important;
+    padding:12px 12px 9px !important;
+    margin:0 !important;
+    box-sizing:border-box !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-main{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    width:100% !important;
+    min-height:0 !important;
+    height:auto !important;
+    gap:8px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-brand,
+  footer.site-footer.mockup-footer .mockup-footer-action{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-brand > a{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-logo{
+    display:block !important;
+    width:132px !important;
+    max-width:60vw !important;
+    height:auto !important;
+    max-height:78px !important;
+    object-fit:contain !important;
+    margin:0 auto !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-divider{
+    display:block !important;
+    width:78% !important;
+    height:1px !important;
+    min-height:1px !important;
+    margin:0 auto !important;
+    padding:0 !important;
+    flex:0 0 1px !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-estimate{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:100% !important;
+    max-width:100% !important;
+    min-height:42px !important;
+    height:auto !important;
+    margin:0 !important;
+    padding:9px 12px !important;
+    box-sizing:border-box !important;
+    font-size:14px !important;
+    line-height:1.2 !important;
+    border-radius:24px !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-call{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:8px !important;
+    margin:0 !important;
+    padding:0 !important;
+    font-size:16px !important;
+    line-height:1.2 !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-phone{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:34px !important;
+    min-width:34px !important;
+    height:34px !important;
+    min-height:34px !important;
+    margin:0 !important;
+    padding:0 !important;
+    box-sizing:border-box !important;
+    font-size:18px !important;
+  }
+  footer.site-footer.mockup-footer .mockup-footer-copyright{
+    display:block !important;
+    width:100% !important;
+    margin:5px auto 0 !important;
+    padding:0 !important;
+    font-size:10px !important;
+    line-height:1.35 !important;
+    text-align:center !important;
+    overflow-wrap:anywhere !important;
+    box-sizing:border-box !important;
+  }
+}
